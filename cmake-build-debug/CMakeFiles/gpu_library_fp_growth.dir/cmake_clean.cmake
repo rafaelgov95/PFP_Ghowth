@@ -1,0 +1,10 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o"
+  "libgpu_library_fp_growth.pdb"
+  "libgpu_library_fp_growth.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CUDA)
+  include(CMakeFiles/gpu_library_fp_growth.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

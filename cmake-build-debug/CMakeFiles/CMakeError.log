@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_78219/fast"
+/usr/bin/make -f CMakeFiles/cmTC_78219.dir/build.make CMakeFiles/cmTC_78219.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_78219.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_78219.dir/CheckSymbolExists.cxx.o -c /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_78219
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78219.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_78219.dir/CheckSymbolExists.cxx.o  -o cmTC_78219 
+/usr/bin/ld: CMakeFiles/cmTC_78219.dir/CheckSymbolExists.cxx.o: na função "main":
+CheckSymbolExists.cxx:(.text+0x1b): referência não definida para "pthread_create"
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_78219.dir/build.make:98: cmTC_78219] Error 1
+make[1]: Leaving directory '/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:126: cmTC_78219/fast] Error 2
+
+File /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a26d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a26d.dir/build.make CMakeFiles/cmTC_3a26d.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a26d.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3a26d.dir/CheckFunctionExists.cxx.o -c /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_3a26d
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a26d.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3a26d.dir/CheckFunctionExists.cxx.o  -o cmTC_3a26d -lpthreads 
+/usr/bin/ld: não foi possível localizar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3a26d.dir/build.make:98: cmTC_3a26d] Error 1
+make[1]: Leaving directory '/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:126: cmTC_3a26d/fast] Error 2
+
+

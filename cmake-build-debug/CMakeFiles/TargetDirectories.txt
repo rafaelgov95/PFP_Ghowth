@@ -1,0 +1,5 @@
+/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir
+/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir
+/home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/fp_cuda.dir

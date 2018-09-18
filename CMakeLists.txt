@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
-project(pfp_growth LANGUAGES CXX CUDA)
+project(PFP_Ghowth LANGUAGES CXX CUDA)
 find_package(CUDA 9 REQUIRED)
 
 set(CTest)
+    
 include_directories(${CUDA_INCLUDE_DIRS} "${CMAKE_SOURCE_DIR}/src" "${CMAKE_SOURCE_DIR}/include")
 set(CATCH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/unit-test)
 set(CMAKE_C_COMPILER /usr/bin/gcc-7 CACHE PATH "" FORCE)
@@ -14,8 +15,8 @@ add_definitions(-DUNIT_TEST)
 
 add_library(gpu_library_fp_growth STATIC
         include/cudaHeaders.h
-#        include/Kernel.h
-#        src/Kernel.cu
+        include/Kernel.h
+        src/Kernel.cu
         include/PFPGrowth.cu.h
         src/PFPGrowth.cu
         )
@@ -37,7 +38,7 @@ target_compile_features(cpu_library_fp_growth PUBLIC cxx_std_11)
 set_target_properties( cpu_library_fp_growth
         PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 
-add_executable(fp_cuda main.cu include/Kernel.h src/Kernel.cu unit-test/catch.hpp)
+add_executable(fp_cuda main.cu unit-test/catch.hpp)
 
 set_property(TARGET fp_cuda
         PROPERTY CUDA_SEPARABLE_COMPILATION ON)

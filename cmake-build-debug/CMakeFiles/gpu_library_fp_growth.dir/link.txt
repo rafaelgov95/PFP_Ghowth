@@ -1,2 +1,2 @@
-/usr/bin/ar qc libgpu_library_fp_growth.a  CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o
+/usr/bin/ar qc libgpu_library_fp_growth.a  CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o
 /usr/bin/ranlib libgpu_library_fp_growth.a

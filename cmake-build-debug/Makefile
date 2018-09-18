@@ -48,10 +48,10 @@ RM = /opt/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rafael/Documentos/tcc_fp/pfp-growth
+CMAKE_SOURCE_DIR = /home/rafael/Documentos/PFP_Ghowth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug
+CMAKE_BINARY_DIR = /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/Documentos/tcc_fp/pfp-growth/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -182,7 +182,7 @@ src/Kernel.o: src/Kernel.cu.o
 
 # target to build an object file
 src/Kernel.cu.o:
-	$(MAKE) -f CMakeFiles/fp_cuda.dir/build.make CMakeFiles/fp_cuda.dir/src/Kernel.cu.o
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o
 .PHONY : src/Kernel.cu.o
 
 src/Kernel.i: src/Kernel.cu.i
@@ -191,7 +191,7 @@ src/Kernel.i: src/Kernel.cu.i
 
 # target to preprocess a source file
 src/Kernel.cu.i:
-	$(MAKE) -f CMakeFiles/fp_cuda.dir/build.make CMakeFiles/fp_cuda.dir/src/Kernel.cu.i
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.i
 .PHONY : src/Kernel.cu.i
 
 src/Kernel.s: src/Kernel.cu.s
@@ -200,7 +200,7 @@ src/Kernel.s: src/Kernel.cu.s
 
 # target to generate assembly for a file
 src/Kernel.cu.s:
-	$(MAKE) -f CMakeFiles/fp_cuda.dir/build.make CMakeFiles/fp_cuda.dir/src/Kernel.cu.s
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.s
 .PHONY : src/Kernel.cu.s
 
 src/PFPArray.o: src/PFPArray.cpp.o

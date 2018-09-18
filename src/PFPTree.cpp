@@ -40,6 +40,7 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, uint64_t minimum_
     };
 //    std::set<std::pair<Item, uint64_t>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
 
+
     //Apelacao
     std::vector<std::pair<Item, uint64_t>> items_ordered_by_frequency;
     std::pair<Item, uint64_t> a = std::make_pair(("F"), uint64_t(4));
@@ -66,6 +67,7 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, uint64_t minimum_
         for (const auto &pair : items_ordered_by_frequency) {
             const Item &item = pair.first;
 
+//            printf("%s",item.c_str());
             // check if item is contained in the current transaction
             if (std::find(transaction.cbegin(), transaction.cend(), item) != transaction.cend()) {
                 // insert item in the tree

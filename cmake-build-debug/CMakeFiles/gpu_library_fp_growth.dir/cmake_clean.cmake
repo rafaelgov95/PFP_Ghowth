@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o"
   "CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o"
   "libgpu_library_fp_growth.pdb"
   "libgpu_library_fp_growth.a"

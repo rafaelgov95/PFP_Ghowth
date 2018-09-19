@@ -38,24 +38,24 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, uint64_t minimum_
             return lhs.second > rhs.second || lhs.second == rhs.second && lhs.first < rhs.first;
         }
     };
-//    std::set<std::pair<Item, uint64_t>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
+    std::set<std::pair<Item, uint64_t>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
 
 
     //Apelacao
-    std::vector<std::pair<Item, uint64_t>> items_ordered_by_frequency;
-    std::pair<Item, uint64_t> a = std::make_pair(("F"), uint64_t(4));
-    std::pair<Item, uint64_t> b = std::make_pair("C", uint64_t(4));
-    std::pair<Item, uint64_t> c = std::make_pair("A", uint64_t(3));
-    std::pair<Item, uint64_t> d = std::make_pair("B", uint64_t(3));
-    std::pair<Item, uint64_t> e = std::make_pair("M", uint64_t(3));
-    std::pair<Item, uint64_t> f = std::make_pair("P", uint64_t(3));
-
-    items_ordered_by_frequency.push_back(a);
-    items_ordered_by_frequency.push_back(b);
-    items_ordered_by_frequency.push_back(c);
-    items_ordered_by_frequency.push_back(d);
-    items_ordered_by_frequency.push_back(e);
-    items_ordered_by_frequency.push_back(f);
+//    std::vector<std::pair<Item, uint64_t>> items_ordered_by_frequency;
+//    std::pair<Item, uint64_t> a = std::make_pair(("F"), uint64_t(4));
+//    std::pair<Item, uint64_t> b = std::make_pair("C", uint64_t(4));
+//    std::pair<Item, uint64_t> c = std::make_pair("A", uint64_t(3));
+//    std::pair<Item, uint64_t> d = std::make_pair("B", uint64_t(3));
+//    std::pair<Item, uint64_t> e = std::make_pair("M", uint64_t(3));
+//    std::pair<Item, uint64_t> f = std::make_pair("P", uint64_t(3));
+//
+//    items_ordered_by_frequency.push_back(a);
+//    items_ordered_by_frequency.push_back(b);
+//    items_ordered_by_frequency.push_back(c);
+//    items_ordered_by_frequency.push_back(d);
+//    items_ordered_by_frequency.push_back(e);
+//    items_ordered_by_frequency.push_back(f);
 
     auto curr_rootFolhas = rootFolhas;
     // scan the transactions again

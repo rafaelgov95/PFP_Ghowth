@@ -32,6 +32,8 @@
             { b, c, k, s, p },
             { a, f, c, e, l, p, m, n }
     };
+
+
 int main( int argc, char * argv[] ){
         const uint64_t minimum_support_threshold = 3;
         const PFPTree fptree{transactions, minimum_support_threshold};

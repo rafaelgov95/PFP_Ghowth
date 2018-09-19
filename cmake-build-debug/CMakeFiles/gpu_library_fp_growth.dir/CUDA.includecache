@@ -86,12 +86,6 @@ thrust/device_vector.h
 math.h
 ../include/math.h
 
-/../usr/include/form.h
-curses.h
--
-eti.h
--
-
 /home/rafael/Documentos/PFP_Ghowth/include/PFPArray.h
 cstdint
 -
@@ -131,8 +125,6 @@ cuda.h
 /home/rafael/Documentos/PFP_Ghowth/src/cuda.h
 ../include/PFPArray.h
 /home/rafael/Documentos/PFP_Ghowth/include/PFPArray.h
-../../../../../../usr/include/form.h
-/../usr/include/form.h
 
 /home/rafael/Documentos/PFP_Ghowth/src/PFPGrowth.cu
 cudaHeaders.h

@@ -14,6 +14,7 @@
 #include <thrust/device_vector.h>
 #define MAX_STR_SIZE 32
 
+
 struct PFPArrayMap {
     PFPNode *ItemId;
     int indexP;
@@ -50,6 +51,10 @@ typedef struct{
     int size;
 }EloVector;
 
+typedef struct {
+    Elo elo;
+    int size;
+}SetMap;
 
 using HashMap = std::vector<std::pair<PFPArrayMap, int >>;
 

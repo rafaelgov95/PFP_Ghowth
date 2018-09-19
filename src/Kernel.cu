@@ -21,10 +21,7 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort =
     }
 }
 
-typedef struct {
-    Elo elo;
-    int size;
-}SetMap;
+
 
 
 

@@ -27,15 +27,13 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     EloVector *device_pointer_elo_vector, *host_elos_vector_and_memory_pointer_elos, *data_host_elos_vector;
     Elo *host_elos[eloPosMapSize];
     int *deviceEloVectorSize;
-    int hostEloVectorSize=0;
+    int hostEloVectorSize=1;
 
 
     data_host_elos_vector = (EloVector *)malloc(sizeof(EloVector)*eloPosMapSize);
     for (int j = 0; j < eloPosMapSize; ++j) {
         data_host_elos_vector[j].eloArray=(Elo *)malloc(sizeof(Elo)*eloPosMapSize);
     }
-    data_host_elos_vector[0].eloArray=eloMap;
-    data_host_elos_vector[0].size=eloPosMapSize;
 
     host_elos_vector_and_memory_pointer_elos = (EloVector*)malloc(eloPosMapSize * sizeof(EloVector));
     memcpy(host_elos_vector_and_memory_pointer_elos, data_host_elos_vector, eloPosMapSize * sizeof(EloVector));
@@ -57,7 +55,7 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
 
     gpuErrchk(cudaMemcpy(device_ArrayMap, arrayMap, sizeof(ArrayMap) * arrayMapSize, cudaMemcpyHostToDevice));
 
-    gpuErrchk(cudaMemcpy(device_elo_inicial, data_host_elos_vector[0].eloArray, sizeof(Elo) * eloPosMapSize, cudaMemcpyHostToDevice));
+    gpuErrchk(cudaMemcpy(device_elo_inicial, eloMap, sizeof(Elo) * eloPosMapSize, cudaMemcpyHostToDevice));
 
     gpuErrchk(cudaMemcpy(device_elosize_inical, &host_elosize_inical, sizeof(int), cudaMemcpyHostToDevice));
 
@@ -86,6 +84,33 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
         gpuErrchk(cudaMemcpy(host_elos[i],host_elos_vector_and_memory_pointer_elos[i].eloArray,sizeof(Elo)*eloPosMapSize*2,cudaMemcpyDeviceToHost)); //Tamanho ficou pequeno para o final
 
     }
+    SetMap *setMap = (SetMap *)malloc(sizeof(SetMap)*eloPosMapSize);
+    int intdex=0;
+    for (int k = 0; k < eloPosMapSize; ++k) {
+        strcmp(setMap[k].elo.ItemId, " ");
+    }
+    for (int k = 0; k < eloPosMapSize; ++k) {
+        int i = 0;
+        bool flag = true;
+        while (i < eloPosMapSize && flag) {
+            if (0 == strcmp(setMap[i].elo.ItemId,"")) {
+                setMap[i].elo = eloMap[k];
+                intdex++;
+                flag = false;
+            } else {
+                if (0 == strcmp(eloMap[k].ItemId, setMap[i].elo.ItemId)) {
+                    flag = false;
+                    setMap[i].elo.suporte += eloMap[k].suporte;
+                }
+            }
+            i++;
+        }
+    }
+    for (int l = 0; l <intdex ; ++l) {
+        host_elos[0][l]=setMap[l].elo;
+    }
+    host_elos_vector_and_memory_pointer_elos[0].size=intdex;
+
 
     printf("Total de Gerações de Frequência %d\n",hostEloVectorSize+1);
     for (int k = 0; k <=hostEloVectorSize+1; ++k) {

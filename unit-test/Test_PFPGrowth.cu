@@ -32,12 +32,34 @@
             { b, c, k, s, p },
             { a, f, c, e, l, p, m, n }
     };
+//
 
+//const std::vector<Transaction> transactions{
+//        { a, b, d, e },
+//        { b, c, e },
+//        { a, b, d, e },
+//        { a, b, c, e },
+//        { a, b, c, d, e },
+//        { b, c, d },
+//};
+
+//const std::vector<Transaction> transactions{
+//        { a, b },
+//        { b, c, d },
+//        { a, c, d, e },
+//        { a, d, e },
+//        { a, b, c },
+//        { a, b, c, d },
+//        { a },
+//        { a, b, c },
+//        { a, b, d },
+//        { b, c, e }
+//};
 
 int main( int argc, char * argv[] ){
-        const uint64_t minimum_support_threshold = 3;
+        const int minimum_support_threshold = 3;
         const PFPTree fptree{transactions, minimum_support_threshold};
         PFPArray pfp_array(fptree);
-        PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1);
+        PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1,minimum_support_threshold);
     return 0;
     }

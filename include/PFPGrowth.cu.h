@@ -22,7 +22,7 @@ class PFPGrowth {
     ArrayMap*  arrayMap;
     ArrayMap*  eloPos;
 public:
-    PFPGrowth(ArrayMap *arrayMap,Elo *eloPos,size_t arrayMapSize,size_t eloPosSize);
+    PFPGrowth(ArrayMap *arrayMap,Elo *eloPos,size_t arrayMapSize,size_t eloPosSize, int minimo_suporte);
 
 };
 

@@ -57,7 +57,7 @@
 //};
 
 int main( int argc, char * argv[] ){
-        const int minimum_support_threshold = 2;
+        const int minimum_support_threshold =3;
         const PFPTree fptree{transactions, minimum_support_threshold};
         PFPArray pfp_array(fptree);
         PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1,minimum_support_threshold);

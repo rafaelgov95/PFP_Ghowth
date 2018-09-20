@@ -126,8 +126,7 @@ __global__ void frequencia_x(EloVector *elo_k1,int elo_k1_current,Elo *elo_x,int
             if ((0 == compare(elo_x[indexAtual].ItemId, setMap[indexSetMap].elo.ItemId)) &&
                 (setMap[indexSetMap].elo.suporte >= minimo)) {
                 elo_new_put[0] = elo_x[indexAtual];
-//                printf("Thread %d Elo size %d AQUI %s %d\n",threadIdx.x,index_new_elo_setmap_local, elo_new_put[index_new_elo_setmap_local].ItemId,elo_new_put[index_new_elo_setmap_local].suporte);
-
+//                printf("Thread %d Elo size %d AQUI %s %d\n",threadIdx.x,indexAtual, elo_x[indexAtual].ItemId,elo_x[indexAtual].suporte);
                 newFlag = false;
             }
             indexSetMap++;
@@ -135,7 +134,9 @@ __global__ void frequencia_x(EloVector *elo_k1,int elo_k1_current,Elo *elo_x,int
         }
         __syncthreads();
     memset(elo_x, 0, sizeof(Elo) * eloMapSize);
-    elo_x[atomicAdd(&index_new_elo_setmap, 1)] = elo_new_put[0];
+    if(elo_new_put[0].suporte!=0) {
+        elo_x[atomicAdd(&index_new_elo_setmap, 1)] = elo_new_put[0];
+    }
     __syncthreads();
     (*eloMapSizePointer)=index_new_elo_setmap;
     index_new_elo_setmap=0;

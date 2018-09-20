@@ -91,26 +91,36 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     }
     SetMap *setMap = (SetMap *)malloc(sizeof(SetMap)*eloPosMapSize);
     int intdex=0;
+//    for (int k = 0; k < eloPosMapSize; ++k) {
+//        strcmp(setMap[k].elo.ItemId, " ");
+//    }
+//    printf("Numero de setMap %d\n",eloPosMapSize);
     for (int k = 0; k < eloPosMapSize; ++k) {
-        strcmp(setMap[k].elo.ItemId, " ");
-    }
-    for (int k = 0; k < eloPosMapSize; ++k) {
+//        printf("Teste 1 %s\n",eloMap[k].ItemId);
         int i = 0;
         bool flag = true;
         while (i < eloPosMapSize && flag) {
             if (0 == strcmp(setMap[i].elo.ItemId,"")) {
-                setMap[i].elo = eloMap[k];
+                setMap[intdex].elo = eloMap[k];
+//                printf("Primeiro aqui index %d %s\n",intdex,setMap[i].elo.ItemId);
                 intdex++;
                 flag = false;
             } else {
                 if (0 == strcmp(eloMap[k].ItemId, setMap[i].elo.ItemId)) {
                     flag = false;
                     setMap[i].elo.suporte += eloMap[k].suporte;
+//                    printf("++ aqui %s\n",setMap[i].elo.ItemId);
+
                 }
             }
             i++;
         }
     }
+    Elo *eloteste =(Elo*) malloc(sizeof(Elo));
+
+//    for (int l = 0; l <intdex-1 ; ++l) {
+//        printf("isso aqui %d\n",setMap[l].elo.suporte);
+//    }
     for (int l = 0; l <intdex ; ++l) {
         host_elos[0][l]=setMap[l].elo;
     }

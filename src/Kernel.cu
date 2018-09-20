@@ -191,21 +191,22 @@ __global__ void pfp_growth(EloVector *elo_k1, int *elo_curr ,ArrayMap *arrayMap,
 
         if (threadIdx.x == elo_x_size - 1) {
             (*elo_int_x)=index_elo_put;
-            printf("AQUI ANTES %d\n", (*elo_int_x));
+            if ( (*elo_int_x) > 0) {
+//                printf("AQUI ANTES %d\n", (*elo_int_x));
 
 //            for (int i = 0; i < (*elo_int_x); ++i) {
 //                printf("VAI DA MORTE  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_x[i].ItemId,elo_x[i].indexArrayMap,elo_x[i].suporte);
 //            }
-            frequencia_x << < 1,  (*elo_int_x), sizeof(SetMap) *  (*elo_int_x)*2 >> >
+                frequencia_x << < 1,  (*elo_int_x), sizeof(SetMap) *  (*elo_int_x)*2 >> >
                                                 (elo_k1, elo_cur, elo_x,elo_int_x , (*minimo_suporte));
 
-            cudaDeviceSynchronize();
-            printf("AQUI DEPOIS %d\n", (*elo_int_x));
+                cudaDeviceSynchronize();
+//                printf("AQUI DEPOIS %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
 //                printf("VOLTA DA MORTE  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_x[i].ItemId,elo_x[i].indexArrayMap,elo_x[i].suporte);
 //            }
-            index_elo_put = 0;
-            if ( (*elo_int_x) > 0) {
+                index_elo_put = 0;
+
                 int x_threads = (*elo_int_x);
                 *(elo_curr) = *(elo_curr) + 1;
 //                printf("Chamando denovo com %d threads \n", x_threads);

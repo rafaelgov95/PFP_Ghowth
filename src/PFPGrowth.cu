@@ -19,6 +19,7 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort =
 }
 
 PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_t eloPosMapSize,int minimo_suporte) {
+
     ArrayMap *device_ArrayMap;
     Elo *device_elo_inicial;
     int *device_elosize_inical;

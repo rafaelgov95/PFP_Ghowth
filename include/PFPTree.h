@@ -41,11 +41,10 @@ struct PFPLeaf{
 struct PFPTree {
     std::shared_ptr<PFPNode> root;
     std::shared_ptr<PFPLeaf> rootFolhas;
-    uint64_t minimum_support_threshold;
+    int minimum_support_threshold;
 
-    PFPTree(const std::vector<Transaction>&, uint64_t);
+    PFPTree(const std::vector<Transaction>&, int);
 
-    bool empty() const;
 };
 
 

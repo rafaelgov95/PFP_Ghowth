@@ -98,12 +98,13 @@ void PFPArray::create_array_and_elepos(const PFPTree &fptree) {
         }
         rootFolha = rootFolha.get()->next;
     }
-    size_t size = sizeof(ArrayMap) * arrayMap.size();
-    _arrayMap = (ArrayMap *) malloc(size);
+    int sizeBits = sizeof(ArrayMap) * arrayMap.size();
+    _arrayMap = (ArrayMap *) malloc(sizeBits);
     for (auto it = arrayMap.begin(); it != arrayMap.end(); ++it) {
         long index = std::distance(arrayMap.begin(), it);
         _arrayMap[index].suporte = (*it).suporte;
         _arrayMap[index].indexP = (*it).indexP;
+
         std::strcpy(_arrayMap[index].ItemId, (*it).ItemId->item.c_str());
     }
 }

@@ -130,10 +130,10 @@ __global__ void frequencia_x(EloVector *elo_k1,int elo_k1_current,Elo *elo_x,int
     if(elo_new_put[0].suporte!=0) {
         elo_x[atomicAdd(&index_new_elo_setmap, 1)] = elo_new_put[0];
     }
-    __syncthreads();
+//    __syncthreads();
     (*eloMapSizePointer)=index_new_elo_setmap;
     index_new_elo_setmap=0;
-    __syncthreads();
+//    __syncthreads();
 //    printf("Teste %d\n",index_elo_setmap);
            if (indexAtual <= index_elo_setmap && setMap[indexAtual].elo.suporte >= minimo && 0 != compare(setMap[indexAtual].elo.ItemId, "")) {
                     elo_k1[elo_k1_current].eloArray[atomicAdd(&index_new_elo_setmap, 1)] = setMap[indexAtual].elo;

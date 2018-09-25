@@ -1,6 +1,19 @@
-//
-// Created by rafael on 01/09/18.
-//
+/*
+   Copyright 2016 Rafael Viana 01/09/18.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+
 #include "cudaHeaders.h"
 #include "Kernel.h"
 #include "PFPArray.h"
@@ -121,9 +134,6 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     }
     Elo *eloteste =(Elo*) malloc(sizeof(Elo));
 
-//    for (int l = 0; l <intdex-1 ; ++l) {
-//        printf("isso aqui %d\n",setMap[l].elo.suporte);
-//    }
     for (int l = 0; l <intdex ; ++l) {
         host_elos[0][l]=setMap[l].elo;
     }

@@ -196,6 +196,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/rafael/Documentos/PFP_Ghowth/include/FPTransMap.h">
+			<Option target="gpu_library_fp_growth"/>
+		</Unit>
 		<Unit filename="/home/rafael/Documentos/PFP_Ghowth/include/Kernel.h">
 			<Option target="gpu_library_fp_growth"/>
 		</Unit>
@@ -213,6 +216,9 @@
 		</Unit>
 		<Unit filename="/home/rafael/Documentos/PFP_Ghowth/main.cu">
 			<Option target="fp_cuda"/>
+		</Unit>
+		<Unit filename="/home/rafael/Documentos/PFP_Ghowth/src/FPTransMap.cpp">
+			<Option target="gpu_library_fp_growth"/>
 		</Unit>
 		<Unit filename="/home/rafael/Documentos/PFP_Ghowth/src/Kernel.cu">
 			<Option target="gpu_library_fp_growth"/>

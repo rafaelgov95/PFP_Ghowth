@@ -176,6 +176,33 @@ main.cu.s:
 	$(MAKE) -f CMakeFiles/fp_cuda.dir/build.make CMakeFiles/fp_cuda.dir/main.cu.s
 .PHONY : main.cu.s
 
+src/FPTransMap.o: src/FPTransMap.cpp.o
+
+.PHONY : src/FPTransMap.o
+
+# target to build an object file
+src/FPTransMap.cpp.o:
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o
+.PHONY : src/FPTransMap.cpp.o
+
+src/FPTransMap.i: src/FPTransMap.cpp.i
+
+.PHONY : src/FPTransMap.i
+
+# target to preprocess a source file
+src/FPTransMap.cpp.i:
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.i
+.PHONY : src/FPTransMap.cpp.i
+
+src/FPTransMap.s: src/FPTransMap.cpp.s
+
+.PHONY : src/FPTransMap.s
+
+# target to generate assembly for a file
+src/FPTransMap.cpp.s:
+	$(MAKE) -f CMakeFiles/gpu_library_fp_growth.dir/build.make CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.s
+.PHONY : src/FPTransMap.cpp.s
+
 src/Kernel.o: src/Kernel.cu.o
 
 .PHONY : src/Kernel.o
@@ -298,6 +325,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/FPTransMap.o"
+	@echo "... src/FPTransMap.i"
+	@echo "... src/FPTransMap.s"
 	@echo "... src/Kernel.o"
 	@echo "... src/Kernel.i"
 	@echo "... src/Kernel.s"

@@ -19,6 +19,9 @@ add_library(gpu_library_fp_growth STATIC
         src/Kernel.cu
         include/PFPGrowth.cu.h
         src/PFPGrowth.cu
+        src/FPTransMap.cpp
+        include/FPTransMap.h
+
         )
 
 add_library(cpu_library_fp_growth STATIC

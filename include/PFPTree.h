@@ -50,7 +50,8 @@ struct PFPNode {
 struct PFPLeaf{
     std::shared_ptr<PFPNode> value;
     std::shared_ptr<PFPLeaf> next;
-    PFPLeaf(const std::shared_ptr<PFPNode>& value);
+    PFPLeaf(const std::shared_ptr<PFPNode> value);
+    PFPLeaf();
 };
 
 

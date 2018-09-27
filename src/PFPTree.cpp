@@ -28,12 +28,14 @@ struct frequency_comparator {
     }
 };
 
-PFPLeaf::PFPLeaf(const std::shared_ptr<PFPNode> &) :
-        value(value), next(next) {
+PFPLeaf::PFPLeaf(const std::shared_ptr<PFPNode>)
+//        :
+//        value(value), next(next)
+{
 }
 
 PFPNode::PFPNode(const Item &item, const std::shared_ptr<PFPNode> &parent) :
-        item(item), frequency(1), parent(parent), children(children), is_visit(false) {
+        item(item), frequency(1), parent(parent), is_visit(false) {
 }
 
 PFPTree::PFPTree(const std::vector<Transaction> &transactions, int minimum_support_threshold) :
@@ -48,20 +50,17 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, int minimum_suppo
         }
     }
 
-    for (auto it = frequency_by_item.cbegin(); it != frequency_by_item.cend();) {
+    for (auto it = frequency_by_item.cbegin(); it != frequency_by_item.cend();++it) {
         const int item_frequency = (*it).second;
-        if (item_frequency < minimum_support_threshold) { frequency_by_item.erase(it++); }
-        else { ++it; }
+        if (item_frequency < minimum_support_threshold) frequency_by_item.erase(it);
+
     }
-
-
-
 
 //    std::set<std::pair<Item, int>> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
 
 
     // um problema esta aqui.
-//        std::set<std::pair<Item, int>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
+        std::set<std::pair<Item, int>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
 
 
     //Apelacao
@@ -84,38 +83,38 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, int minimum_suppo
     auto curr_rootFolhas = rootFolhas;
 //
     curr_rootFolhas.get()->next = std::make_shared<PFPLeaf>(nullptr);
-//
-//    for (const Transaction &transaction : transactions) {
-//        auto curr_fpnode = root;
-//
-//        for (const auto &pair : items_ordered_by_frequency) {
-//            const Item &item = pair.first;
-//
-//            if (std::find(transaction.cbegin(), transaction.cend(), item) != transaction.cend()) {
-//
-//                 auto it = std::find_if(
-//                        curr_fpnode->children.cbegin(), curr_fpnode->children.cend(),
-//                        [item](const std::shared_ptr<PFPNode> &fpnode) {
-//                            return fpnode->item == item;
-//                        });
-//                if (it == curr_fpnode->children.cend()) {
-//                    auto curr_fpnode_new_child = std::make_shared<PFPNode>(item, curr_fpnode);
-//                    curr_fpnode->children.push_back(curr_fpnode_new_child);
-//                    curr_fpnode = curr_fpnode_new_child;
-//                    curr_rootFolhas.get()->value = curr_fpnode;
-//                } else {
-//                    auto curr_fpnode_child = *it;
-//                    ++curr_fpnode_child->frequency;
-//                    curr_fpnode = curr_fpnode_child;
-//                }
-//            }
-//
-//        }
-//
-//        //corrigir criando atua no final
-//        curr_rootFolhas.get()->next = std::make_shared<PFPLeaf>(nullptr);
-//        curr_rootFolhas = curr_rootFolhas.get()->next;
-//
-//    }
+
+    for (const Transaction &transaction : transactions) {
+        auto curr_fpnode = root;
+
+        for (const auto &pair : items_ordered_by_frequency) {
+            const Item &item = pair.first;
+
+            if (std::find(transaction.cbegin(), transaction.cend(), item) != transaction.cend()) {
+
+                 auto it = std::find_if(
+                        curr_fpnode->children.cbegin(), curr_fpnode->children.cend(),
+                        [item](const std::shared_ptr<PFPNode> &fpnode) {
+                            return fpnode->item == item;
+                        });
+                if (it == curr_fpnode->children.cend()) {
+                    auto curr_fpnode_new_child = std::make_shared<PFPNode>(item, curr_fpnode);
+                    curr_fpnode->children.push_back(curr_fpnode_new_child);
+                    curr_fpnode = curr_fpnode_new_child;
+                    curr_rootFolhas.get()->value = curr_fpnode;
+                } else {
+                    auto curr_fpnode_child = *it;
+                    ++curr_fpnode_child->frequency;
+                    curr_fpnode = curr_fpnode_child;
+                }
+            }
+
+        }
+
+        //corrigir criando atua no final
+        curr_rootFolhas.get()->next = std::make_shared<PFPLeaf>(nullptr);
+        curr_rootFolhas = curr_rootFolhas.get()->next;
+
+    }
 }
 

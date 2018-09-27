@@ -51,14 +51,6 @@ string
 -
 vector
 -
-thrust/transform_reduce.h
--
-thrust/functional.h
--
-thrust/device_vector.h
--
-thrust/host_vector.h
--
 PFPArray.h
 ../include/PFPArray.h
 

@@ -75,9 +75,9 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
 
     gpuErrchk(cudaMemcpy(device_elo_inicial, eloMap, sizeof(Elo) * eloPosMapSize, cudaMemcpyHostToDevice));
 
-    gpuErrchk(cudaMemcpy(device_elosize_inical, &host_elosize_inical, sizeof(int), cudaMemcpyHostToDevice));
-
     gpuErrchk(cudaMemcpy(deviceEloVectorSize,&hostEloVectorSize, sizeof(int), cudaMemcpyHostToDevice));
+
+    gpuErrchk(cudaMemcpy(device_elosize_inical,&eloPosMapSize, sizeof(int), cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(device_minimo_suporte,&minimo_suporte, sizeof(int), cudaMemcpyHostToDevice));
 
     pfp_growth << < 1,eloPosMapSize, sizeof(Elo)*eloPosMapSize*4>>>

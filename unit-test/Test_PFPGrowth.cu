@@ -64,9 +64,9 @@ int main( int argc, char * argv[] ){
                 { b, f, h, j, o },
                 { b, c, k, s, p },
                 { a, f, c, e, l, p, m, n },
-                { b, c, k, s, p },
-                { a, f, c, e, l, p, m, n },
-                { b, c, k, s, p }
+//                { b, c, k, s, p },
+//                { a, f, c, e, l, p, m, n },
+//                { b, c, k, s, p }
 //                ,
 //                { a, f, c, e, l, p, m, n },
 //                { f, a, c, d, g, i, m, p },

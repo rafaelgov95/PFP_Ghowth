@@ -89,7 +89,7 @@ __device__ int index_elo_put;
 
 
 
-__global__ void frequencia_x(EloVector *elo_k1,int elo_k1_current,Elo *elo_x,int *eloMapSizePointer, int minimo) {
+__global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo_k1_current, Elo *elo_x,  int *eloMapSizePointer, int minimo) {
     extern __shared__ SetMap setMap[];
     auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x; //PC
     bool newFlag = true;
@@ -157,11 +157,12 @@ __global__ void frequencia_x(EloVector *elo_k1,int elo_k1_current,Elo *elo_x,int
 
 }
 
-__global__ void pfp_growth(EloVector *elo_k1, int *elo_curr ,ArrayMap *arrayMap,size_t arrayMapSize, Elo *elo_x, int *elo_int_x, int *minimo_suporte) {
+__global__ void pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr ,ArrayMap *arrayMap,size_t arrayMapSize, Elo *elo_x, int *elo_int_x, int *minimo_suporte) {
     extern __shared__ Elo eloMap[];
     auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x;
     int elo_cur= (*elo_curr);
     int elo_x_size= (*elo_int_x);
+//    printf("AQUI ANTES %d\n", elo_x_size);
     int xxx = 0;
     bool flag = true;
     Elo *Elo_k1 = (Elo * ) malloc(sizeof(Elo) *elo_x_size);
@@ -190,28 +191,36 @@ __global__ void pfp_growth(EloVector *elo_k1, int *elo_curr ,ArrayMap *arrayMap,
     __syncthreads();
         if (threadIdx.x == elo_x_size - 1) {
             (*elo_int_x)=index_elo_put;
-            memset(elo_x, 0, sizeof(Elo) * index_elo_put);
-            memcpy(elo_x,eloMap,sizeof(Elo) * index_elo_put);
+           Elo *elo_xx =(Elo*)malloc(sizeof(Elo) * index_elo_put);
+
+            memset(elo_xx, 0, sizeof(Elo) * index_elo_put);
+            memcpy(elo_xx,eloMap,sizeof(Elo) * index_elo_put);
 //                printf("AQUI ANTES %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
-//                printf("VAI PARA FREQUENCIA  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_x[i].ItemId,elo_x[i].indexArrayMap,elo_x[i].suporte);
+//                printf("CANDIDATO VAI PARA FREQUENCIA  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_xx[i].ItemId,elo_xx[i].indexArrayMap,elo_xx[i].suporte);
 //            }
                 frequencia_x << < 1,  (*elo_int_x), sizeof(SetMap) *  (*elo_int_x)*2 >> >
-                                                (elo_k1, elo_cur, elo_x,elo_int_x , (*minimo_suporte));
+                                                (elo_k1, elo_cur, elo_xx, elo_int_x , (*minimo_suporte));
 //
-//                cudaDeviceSynchronize();
-//                printf("AQUI DEPOIS %d\n", (*elo_int_x));
+                cudaDeviceSynchronize();
+//            printf("AQUI DEPOIS %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
-//                printf("VOLTA DA FREQUENCIA   Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_x[i].ItemId,elo_x[i].indexArrayMap,elo_x[i].suporte);
+//                printf("VOLTA DA FREQUENCIA   Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_xx[i].ItemId,elo_xx[i].indexArrayMap,elo_xx[i].suporte);
 //            }
                 index_elo_put = 0;
-            if ( (*elo_int_x) > 0) {
-                int x_threads = (*elo_int_x);
-                *(elo_curr) = *(elo_curr) + 1;
+
+            int x_threads = (*elo_int_x);
+
+//            printf("AQUI CURR %d\n", (*elo_curr));
+
+            if(x_threads>0) {
+                *(elo_curr) = *(elo_curr) +1;
 //                printf("Chamando denovo com %d threads \n", x_threads);
                 pfp_growth << < 1, x_threads,x_threads*sizeof(Elo)*4>> >
-                                              (elo_k1, elo_curr, arrayMap, arrayMapSize,elo_x,elo_int_x,minimo_suporte);
+                                              (elo_k1, elo_curr, arrayMap, arrayMapSize,elo_xx,elo_int_x,minimo_suporte);
 //                cudaDeviceSynchronize();
+            }
+                free(elo_x);
 
             }
 //            __syncthreads();
@@ -219,6 +228,6 @@ __global__ void pfp_growth(EloVector *elo_k1, int *elo_curr ,ArrayMap *arrayMap,
 
         }
 
-}
+//}
 
 

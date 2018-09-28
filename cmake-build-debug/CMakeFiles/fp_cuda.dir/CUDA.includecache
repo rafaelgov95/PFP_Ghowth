@@ -105,6 +105,12 @@ Kernel.h
 /home/rafael/Documentos/PFP_Ghowth/unit-test/Kernel.h
 FPTransMap.h
 /home/rafael/Documentos/PFP_Ghowth/unit-test/FPTransMap.h
+time.h
+-
+sys/time.h
+-
+unistd.h
+-
 
 /opt/cuda/include/builtin_types.h
 device_types.h

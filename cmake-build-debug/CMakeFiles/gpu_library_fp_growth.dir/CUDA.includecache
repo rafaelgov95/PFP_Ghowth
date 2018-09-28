@@ -100,6 +100,10 @@ iostream
 thrust/device_vector.h
 -
 
+/home/rafael/Documentos/PFP_Ghowth/include/cudaHeaders.h
+math.h
+/home/rafael/Documentos/PFP_Ghowth/include/math.h
+
 /home/rafael/Documentos/PFP_Ghowth/src/Kernel.cu
 cudaHeaders.h
 -
@@ -117,6 +121,8 @@ cuda.h
 /home/rafael/Documentos/PFP_Ghowth/src/cuda.h
 ../include/PFPArray.h
 /home/rafael/Documentos/PFP_Ghowth/include/PFPArray.h
+../include/cudaHeaders.h
+/home/rafael/Documentos/PFP_Ghowth/include/cudaHeaders.h
 
 /home/rafael/Documentos/PFP_Ghowth/src/PFPGrowth.cu
 cudaHeaders.h

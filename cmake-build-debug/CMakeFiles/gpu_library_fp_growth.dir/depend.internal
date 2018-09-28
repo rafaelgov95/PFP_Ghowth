@@ -7,6 +7,7 @@ CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o
  ../include/PFPTree.h
  ../include/cudaHeaders.h
  /home/rafael/Documentos/PFP_Ghowth/include/PFPArray.h
+ /home/rafael/Documentos/PFP_Ghowth/include/cudaHeaders.h
  /home/rafael/Documentos/PFP_Ghowth/src/Kernel.cu
  /opt/cuda/include/builtin_types.h
  /opt/cuda/include/crt/host_defines.h

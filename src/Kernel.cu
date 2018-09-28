@@ -22,6 +22,7 @@
 #include <cstdio>
 #include "cuda.h"
 #include "../include/PFPArray.h"
+#include "../include/cudaHeaders.h"
 
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
@@ -97,12 +98,14 @@ __global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo
     int eloSize = 0;
     int eloMapSize =(*eloMapSizePointer);
     Elo *elo_new_put = (Elo*)malloc(sizeof(Elo));
+//    Elo *new_elo_x = (Elo*)malloc(sizeof(Elo)());
+
     memset(setMap, 0, sizeof(SetMap) * eloMapSize);
     index_elo_setmap =0;
     index_new_elo_setmap=0;
 
     __syncthreads();
-        if (indexAtual == 0) {
+        if (threadIdx.x == 0) {
             for (int k = 0; k < eloMapSize; ++k) {
                 int i = 0;
                 bool flag = true;
@@ -137,10 +140,13 @@ __global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo
             indexSetMap++;
 
         }
-//        __syncthreads();
-//    memset(elo_x, 0, sizeof(Elo) * eloMapSize);
-//    __syncthreads();
+    __syncthreads();
+//        if(threadIdx.x==0) {
+            memset(elo_x, 0, sizeof(Elo) * eloMapSize);
+//        }
+    __syncthreads();
 
+//    __threadfence_block();
     if(elo_new_put[0].suporte!=0) {
         elo_x[atomicAdd(&index_new_elo_setmap, 1)] = elo_new_put[0];
     }
@@ -153,11 +159,11 @@ __global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo
            if (indexAtual <= index_elo_setmap && setMap[indexAtual].elo.suporte >= minimo && 0 != compare(setMap[indexAtual].elo.ItemId, "")) {
                     elo_k1[elo_k1_current].eloArray[atomicAdd(&index_new_elo_setmap, 1)] = setMap[indexAtual].elo;
                 printf("Thread %d Elo size %d AQUI %s %d\n",indexAtual,index_new_elo_setmap, elo_x[indexAtual].ItemId,elo_x[indexAtual].suporte);
-            }
+                   elo_k1[elo_k1_current].size=index_new_elo_setmap;
+
+           }
 
     __syncthreads();
-    elo_k1[elo_k1_current].size=index_new_elo_setmap;
-
 
 
 }
@@ -193,21 +199,21 @@ __global__ void pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo
         }
 
     __syncthreads();
-        if (threadIdx.x == elo_x_size - 1) {
+        if (threadIdx.x == 0) {
             (*elo_int_x)=index_elo_put;
            Elo *elo_xx =(Elo*)malloc(sizeof(Elo) * index_elo_put);
 
             memset(elo_xx, 0, sizeof(Elo) * index_elo_put);
             memcpy(elo_xx,eloMap,sizeof(Elo) * index_elo_put);
-                printf("AQUI ANTES %d\n", (*elo_int_x));
+//                printf("AQUI ANTES %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
 //                printf("CANDIDATO VAI PARA FREQUENCIA  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_xx[i].ItemId,elo_xx[i].indexArrayMap,elo_xx[i].suporte);
 //            }
                 frequencia_x << < 1,  (*elo_int_x), sizeof(SetMap) *  (*elo_int_x) >> >
                                                 (elo_k1, elo_cur, elo_xx, elo_int_x , (*minimo_suporte));
-//
-                cudaDeviceSynchronize();
-            printf("AQUI DEPOIS %d\n", (*elo_int_x));
+//__syncthreads();
+//                cudaDeviceSynchronize();
+//            printf("AQUI DEPOIS %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
 //                printf("VOLTA DA FREQUENCIA   Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_xx[i].ItemId,elo_xx[i].indexArrayMap,elo_xx[i].suporte);
 //            }
@@ -222,12 +228,12 @@ __global__ void pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo
 //                printf("Chamando denovo com %d threads \n", x_threads);
                 pfp_growth << < 1, x_threads,x_threads*sizeof(Elo)*4>> >
                                               (elo_k1, elo_curr, arrayMap, arrayMapSize,elo_xx,elo_int_x,minimo_suporte);
-                cudaDeviceSynchronize();
+//                cudaDeviceSynchronize();
             }
 //                free(elo_x);
 
             }
-//            __syncthreads();
+            __syncthreads();
 
 
         }

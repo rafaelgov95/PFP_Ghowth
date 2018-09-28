@@ -6,7 +6,7 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o
  ../include/PFPArray.h
  ../include/PFPTree.h
  ../include/cudaHeaders.h
- /home/rafael/Documentos/PFP_Ghowth/src/PFPArray.cpp
+ /home/rafael/PFP_Ghowth/src/PFPArray.cpp
  /opt/cuda/include/builtin_types.h
  /opt/cuda/include/crt/host_defines.h
  /opt/cuda/include/cuComplex.h
@@ -20,7 +20,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o
  /opt/cuda/include/cuda_runtime_api.h
  /opt/cuda/include/device_types.h
  /opt/cuda/include/driver_types.h
- /opt/cuda/include/host_defines.h
  /opt/cuda/include/library_types.h
  /opt/cuda/include/surface_types.h
  /opt/cuda/include/texture_types.h
@@ -368,7 +367,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o
  /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
  /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
  /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
- /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
  /opt/cuda/include/thrust/system/cuda/detail/merge.h
  /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
  /opt/cuda/include/thrust/system/cuda/detail/par.h
@@ -686,10 +684,9 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o
  /opt/cuda/include/vector_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o
  ../include/PFPTree.h
- /home/rafael/Documentos/PFP_Ghowth/src/PFPTree.cpp
+ /home/rafael/PFP_Ghowth/src/PFPTree.cpp
  /opt/cuda/include/builtin_types.h
  /opt/cuda/include/crt/host_defines.h
- /opt/cuda/include/cuda.h
  /opt/cuda/include/cuda_device_runtime_api.h
  /opt/cuda/include/cuda_fp16.h
  /opt/cuda/include/cuda_fp16.hpp
@@ -697,7 +694,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o
  /opt/cuda/include/cuda_runtime_api.h
  /opt/cuda/include/device_types.h
  /opt/cuda/include/driver_types.h
- /opt/cuda/include/host_defines.h
  /opt/cuda/include/surface_types.h
  /opt/cuda/include/texture_types.h
  /opt/cuda/include/thrust/adjacent_difference.h
@@ -1044,7 +1040,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o
  /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
  /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
  /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
- /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
  /opt/cuda/include/thrust/system/cuda/detail/merge.h
  /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
  /opt/cuda/include/thrust/system/cuda/detail/par.h

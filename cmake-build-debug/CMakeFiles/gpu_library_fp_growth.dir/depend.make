@@ -18,7 +18,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/cuda_occ
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/cuda_runtime_api.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/device_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/driver_types.h
-CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/host_defines.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/surface_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/texture_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/adjacent_difference.h
@@ -365,7 +364,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/s
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
-CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/merge.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
 CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o: /opt/cuda/include/thrust/system/cuda/detail/par.h
@@ -699,7 +697,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/cuda_
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/cuda_runtime_api.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/device_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/driver_types.h
-CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/host_defines.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/surface_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/texture_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/adjacent_difference.h
@@ -1046,7 +1043,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrus
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
-CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/merge.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
 CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o: /opt/cuda/include/thrust/system/cuda/detail/par.h
@@ -1367,7 +1363,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: ../include/FPTransMap
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: ../src/FPTransMap.cpp
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/builtin_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/crt/host_defines.h
-CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cuda.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cuda_device_runtime_api.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cuda_fp16.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cuda_fp16.hpp
@@ -1375,7 +1370,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cud
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/cuda_runtime_api.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/device_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/driver_types.h
-CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/host_defines.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/surface_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/texture_types.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/adjacent_difference.h
@@ -1722,7 +1716,6 @@ CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thr
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
-CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/merge.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
 CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/par.h

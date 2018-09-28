@@ -19,7 +19,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/cuda_
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/cuda_runtime_api.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/device_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/driver_types.h
-CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/host_defines.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/library_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/surface_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/texture_types.h
@@ -367,7 +366,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrus
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
-CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/merge.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/par.h
@@ -688,7 +686,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: ../include/PFPTree.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: ../src/PFPTree.cpp
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/builtin_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/crt/host_defines.h
-CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda_device_runtime_api.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda_fp16.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda_fp16.hpp
@@ -696,7 +693,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda_o
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/cuda_runtime_api.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/device_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/driver_types.h
-CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/host_defines.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/surface_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/texture_types.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/adjacent_difference.h
@@ -1043,7 +1039,6 @@ CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
-CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/merge.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
 CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o: /opt/cuda/include/thrust/system/cuda/detail/par.h

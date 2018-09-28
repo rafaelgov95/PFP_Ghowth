@@ -90,26 +90,32 @@ thrust/device_vector.h
 math.h
 ../include/math.h
 
-/home/rafael/Documentos/PFP_Ghowth/main.cu
+/home/rafael/PFP_Ghowth/main.cu
 unit-test/Test_PFPGrowth.cu
-/home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
+/home/rafael/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
 
-/home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
+/home/rafael/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
 PFPTree.h
-/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPTree.h
+/home/rafael/PFP_Ghowth/unit-test/PFPTree.h
 PFPArray.h
-/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPArray.h
+/home/rafael/PFP_Ghowth/unit-test/PFPArray.h
 PFPGrowth.cu.h
-/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPGrowth.cu.h
+/home/rafael/PFP_Ghowth/unit-test/PFPGrowth.cu.h
 Kernel.h
-/home/rafael/Documentos/PFP_Ghowth/unit-test/Kernel.h
+/home/rafael/PFP_Ghowth/unit-test/Kernel.h
 FPTransMap.h
-/home/rafael/Documentos/PFP_Ghowth/unit-test/FPTransMap.h
+/home/rafael/PFP_Ghowth/unit-test/FPTransMap.h
 time.h
 -
 sys/time.h
 -
 unistd.h
+-
+fstream
+-
+iostream
+-
+sstream
 -
 
 /opt/cuda/include/builtin_types.h
@@ -135,8 +141,8 @@ stdint.h
 /opt/cuda/include/cuda_device_runtime_api.h
 driver_types.h
 /opt/cuda/include/driver_types.h
-host_defines.h
-/opt/cuda/include/host_defines.h
+crt/host_defines.h
+/opt/cuda/include/crt/host_defines.h
 
 /opt/cuda/include/cuda_fp16.h
 cuda_fp16.hpp
@@ -155,30 +161,26 @@ limits.h
 -
 
 /opt/cuda/include/cuda_runtime_api.h
-host_defines.h
-/opt/cuda/include/host_defines.h
+crt/host_defines.h
+/opt/cuda/include/crt/host_defines.h
 builtin_types.h
 /opt/cuda/include/builtin_types.h
 cuda_device_runtime_api.h
 /opt/cuda/include/cuda_device_runtime_api.h
 
 /opt/cuda/include/device_types.h
-host_defines.h
-/opt/cuda/include/host_defines.h
+crt/host_defines.h
+/opt/cuda/include/crt/host_defines.h
 
 /opt/cuda/include/driver_types.h
-host_defines.h
-/opt/cuda/include/host_defines.h
+crt/host_defines.h
+/opt/cuda/include/crt/host_defines.h
 vector_types.h
 /opt/cuda/include/vector_types.h
 limits.h
 -
 stddef.h
 -
-
-/opt/cuda/include/host_defines.h
-crt/host_defines.h
-/opt/cuda/include/crt/host_defines.h
 
 /opt/cuda/include/surface_types.h
 driver_types.h
@@ -473,8 +475,6 @@ thrust/detail/config/config.h
 -
 
 /opt/cuda/include/thrust/detail/config/compiler.h
-cuda.h
--
 
 /opt/cuda/include/thrust/detail/config/compiler_fence.h
 thrust/detail/config.h
@@ -2619,6 +2619,10 @@ thrust/detail/config.h
 /opt/cuda/include/thrust/system/cuda/detail/adjacent_difference.h
 thrust/system/cuda/config.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/cub/device/device_select.cuh
@@ -2628,8 +2632,6 @@ thrust/system/cuda/detail/cub/block/block_adjacent_difference.cuh
 thrust/system/cuda/detail/core/agent_launcher.h
 -
 thrust/system/cuda/detail/par_to_seq.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/functional.h
 -
@@ -2657,6 +2659,10 @@ thrust/system/cuda/detail/copy.h
 -
 
 /opt/cuda/include/thrust/system/cuda/detail/binary_search.h
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/execution_policy.h
@@ -2693,11 +2699,13 @@ thrust/detail/temporary_array.h
 /opt/cuda/include/thrust/system/cuda/detail/copy_if.h
 thrust/system/cuda/config.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/cub/device/device_select.cuh
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/system/cuda/detail/core/agent_launcher.h
 -
@@ -2708,6 +2716,8 @@ thrust/system/cuda/detail/par_to_seq.h
 thrust/detail/function.h
 -
 thrust/distance.h
+-
+thrust/detail/alignment.h
 -
 thrust/copy.h
 -
@@ -3337,8 +3347,6 @@ thrust/iterator/iterator_traits.h
 -
 
 /opt/cuda/include/thrust/system/cuda/detail/cub/thread/thread_load.cuh
-cuda.h
--
 iterator
 -
 ../util_ptx.cuh
@@ -3369,8 +3377,6 @@ iterator
 /opt/cuda/include/thrust/system/cuda/detail/cub/util_namespace.cuh
 
 /opt/cuda/include/thrust/system/cuda/detail/cub/thread/thread_store.cuh
-cuda.h
--
 ../util_ptx.cuh
 /opt/cuda/include/thrust/system/cuda/detail/cub/util_ptx.cuh
 ../util_type.cuh
@@ -3547,6 +3553,10 @@ thrust/system/cuda/config.h
 -
 thrust/system/cuda/detail/reduce.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/extrema.h
 -
 thrust/pair.h
@@ -3653,7 +3663,9 @@ thrust/detail/raw_pointer_cast.h
 -
 thrust/system/cuda/detail/uninitialized_copy.h
 -
-thrust/detail/temporary_buffer.h
+thrust/system/cuda/detail/util.h
+-
+thrust/detail/temporary_array.h
 -
 
 /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
@@ -3672,6 +3684,8 @@ thrust/detail/config.h
 thrust/system/cuda/config.h
 -
 thrust/detail/raw_pointer_cast.h
+-
+thrust/system/cuda/detail/execution_policy.h
 -
 thrust/swap.h
 -
@@ -3694,19 +3708,11 @@ thrust/system/cuda/detail/util.h
 thrust/system/detail/bad_alloc.h
 -
 
-/opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
-thrust/detail/pointer.h
--
-thrust/detail/raw_pointer_cast.h
--
-thrust/pair.h
--
-thrust/system/cuda/config.h
--
-thrust/system/cuda/detail/execution_policy.h
--
-
 /opt/cuda/include/thrust/system/cuda/detail/merge.h
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/execution_policy.h
@@ -3716,8 +3722,6 @@ thrust/system/cuda/detail/util.h
 thrust/system/cuda/detail/core/agent_launcher.h
 -
 thrust/system/cuda/detail/core/util.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/system/cuda/detail/par_to_seq.h
 -
@@ -3777,6 +3781,10 @@ thrust/system/cuda/detail/par_to_seq.h
 /opt/cuda/include/thrust/system/cuda/detail/partition.h
 thrust/system/cuda/config.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/reverse.h
@@ -3815,8 +3823,6 @@ thrust/system/cuda/detail/cub/device/device_reduce.cuh
 -
 thrust/system/cuda/detail/par_to_seq.h
 -
-thrust/system/cuda/detail/memory_buffer.h
--
 thrust/system/cuda/detail/get_value.h
 -
 thrust/functional.h
@@ -3841,6 +3847,10 @@ thrust/system/cuda/config.h
 -
 thrust/detail/type_traits.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/detail/raw_reference_cast.h
@@ -3850,8 +3860,6 @@ thrust/detail/type_traits/iterator/is_output_iterator.h
 thrust/system/cuda/detail/cub/device/device_reduce.cuh
 -
 thrust/system/cuda/detail/par_to_seq.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/system/cuda/detail/core/agent_launcher.h
 -
@@ -3866,6 +3874,8 @@ thrust/detail/mpl/math.h
 thrust/detail/minmax.h
 -
 thrust/distance.h
+-
+thrust/detail/alignment.h
 -
 thrust/memory.h
 -
@@ -3907,6 +3917,10 @@ thrust/detail/type_traits/iterator/is_output_iterator.h
 -
 thrust/system/cuda/detail/execution_policy.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/cub/device/device_scan.cuh
@@ -3914,8 +3928,6 @@ thrust/system/cuda/detail/cub/device/device_scan.cuh
 thrust/system/cuda/detail/core/agent_launcher.h
 -
 thrust/system/cuda/detail/par_to_seq.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/detail/mpl/math.h
 -
@@ -3927,6 +3939,10 @@ thrust/scan.h
 -
 
 /opt/cuda/include/thrust/system/cuda/detail/scan_by_key.h
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/execution_policy.h
@@ -3934,8 +3950,6 @@ thrust/system/cuda/execution_policy.h
 thrust/system/cuda/detail/par_to_seq.h
 -
 thrust/system/cuda/detail/core/agent_launcher.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/detail/mpl/math.h
 -
@@ -3959,11 +3973,13 @@ thrust/detail/config.h
 /opt/cuda/include/thrust/system/cuda/detail/set_operations.h
 thrust/system/cuda/detail/util.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/execution_policy.h
 -
 thrust/system/cuda/detail/core/agent_launcher.h
--
-thrust/system/cuda/detail/memory_buffer.h
 -
 thrust/system/cuda/detail/par_to_seq.h
 -
@@ -3979,8 +3995,14 @@ thrust/detail/mpl/math.h
 -
 thrust/distance.h
 -
+thrust/detail/alignment.h
+-
 
 /opt/cuda/include/thrust/system/cuda/detail/sort.h
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/config.h
@@ -3997,8 +4019,6 @@ thrust/system/cuda/detail/par_to_seq.h
 -
 thrust/detail/trivial_sequence.h
 -
-thrust/system/cuda/detail/memory_buffer.h
--
 thrust/extrema.h
 -
 thrust/sort.h
@@ -4006,6 +4026,8 @@ thrust/sort.h
 thrust/distance.h
 -
 thrust/sequence.h
+-
+thrust/detail/alignment.h
 -
 
 /opt/cuda/include/thrust/system/cuda/detail/swap_ranges.h
@@ -4103,11 +4125,13 @@ thrust/system/cuda/config.h
 -
 thrust/system/cuda/detail/cub/device/device_select.cuh
 -
-thrust/system/cuda/detail/memory_buffer.h
--
 thrust/system/cuda/detail/core/agent_launcher.h
 -
 thrust/system/cuda/detail/par_to_seq.h
+-
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
 -
 thrust/system/cuda/detail/util.h
 -
@@ -4129,6 +4153,10 @@ thrust/unique.h
 /opt/cuda/include/thrust/system/cuda/detail/unique_by_key.h
 thrust/system/cuda/config.h
 -
+thrust/detail/cstdint.h
+-
+thrust/detail/temporary_array.h
+-
 thrust/system/cuda/detail/util.h
 -
 thrust/system/cuda/detail/cub/device/device_select.cuh
@@ -4139,8 +4167,6 @@ thrust/system/cuda/detail/get_value.h
 -
 thrust/system/cuda/detail/par_to_seq.h
 -
-thrust/system/cuda/detail/memory_buffer.h
--
 thrust/functional.h
 -
 thrust/pair.h
@@ -4150,6 +4176,8 @@ thrust/detail/mpl/math.h
 thrust/detail/minmax.h
 -
 thrust/distance.h
+-
+thrust/detail/alignment.h
 -
 thrust/memory.h
 -
@@ -7143,6 +7171,6 @@ thrust/detail/unique.inl
 /opt/cuda/include/thrust/version.h
 
 /opt/cuda/include/vector_types.h
-host_defines.h
-/opt/cuda/include/host_defines.h
+crt/host_defines.h
+/opt/cuda/include/crt/host_defines.h
 

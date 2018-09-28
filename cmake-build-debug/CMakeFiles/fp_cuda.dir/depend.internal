@@ -8,8 +8,8 @@ CMakeFiles/fp_cuda.dir/main.cu.o
  ../include/PFPGrowth.cu.h
  ../include/PFPTree.h
  ../include/cudaHeaders.h
- /home/rafael/Documentos/PFP_Ghowth/main.cu
- /home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
+ /home/rafael/PFP_Ghowth/main.cu
+ /home/rafael/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
  /opt/cuda/include/builtin_types.h
  /opt/cuda/include/crt/host_defines.h
  /opt/cuda/include/cuda.h
@@ -20,7 +20,6 @@ CMakeFiles/fp_cuda.dir/main.cu.o
  /opt/cuda/include/cuda_runtime_api.h
  /opt/cuda/include/device_types.h
  /opt/cuda/include/driver_types.h
- /opt/cuda/include/host_defines.h
  /opt/cuda/include/surface_types.h
  /opt/cuda/include/texture_types.h
  /opt/cuda/include/thrust/adjacent_difference.h
@@ -367,7 +366,6 @@ CMakeFiles/fp_cuda.dir/main.cu.o
  /opt/cuda/include/thrust/system/cuda/detail/internal/copy_device_to_device.h
  /opt/cuda/include/thrust/system/cuda/detail/iter_swap.h
  /opt/cuda/include/thrust/system/cuda/detail/malloc_and_free.h
- /opt/cuda/include/thrust/system/cuda/detail/memory_buffer.h
  /opt/cuda/include/thrust/system/cuda/detail/merge.h
  /opt/cuda/include/thrust/system/cuda/detail/mismatch.h
  /opt/cuda/include/thrust/system/cuda/detail/par.h

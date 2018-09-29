@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DUNIT_TEST
 
-CXX_INCLUDES = -I/opt/cuda/include -I/home/rafael/PFP_Ghowth/src -I/home/rafael/PFP_Ghowth/include 
+CXX_INCLUDES = -I/opt/cuda/include -I/home/rafael/Downloads/PFP_Ghowth-dc/src -I/home/rafael/Downloads/PFP_Ghowth-dc/include 
 

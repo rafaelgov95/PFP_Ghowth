@@ -7,11 +7,11 @@ CUDA_FLAGS =  -rdc=true -shared -gencode arch=compute_50,code=sm_50 -lineinfo
 
 CUDA_DEFINES = -DUNIT_TEST
 
-CUDA_INCLUDES = -I/opt/cuda/include -I/home/rafael/PFP_Ghowth/src -I/home/rafael/PFP_Ghowth/include 
+CUDA_INCLUDES = -I/opt/cuda/include -I/home/rafael/Downloads/PFP_Ghowth-dc/src -I/home/rafael/Downloads/PFP_Ghowth-dc/include 
 
 CXX_FLAGS =  
 
 CXX_DEFINES = -DUNIT_TEST
 
-CXX_INCLUDES = -I/opt/cuda/include -I/home/rafael/PFP_Ghowth/src -I/home/rafael/PFP_Ghowth/include 
+CXX_INCLUDES = -I/opt/cuda/include -I/home/rafael/Downloads/PFP_Ghowth-dc/src -I/home/rafael/Downloads/PFP_Ghowth-dc/include 
 

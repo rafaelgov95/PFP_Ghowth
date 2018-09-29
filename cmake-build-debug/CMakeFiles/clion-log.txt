@@ -1,4 +1,4 @@
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rafael/PFP_Ghowth
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rafael/Downloads/PFP_Ghowth-dc
 -- Configuring done
 You have changed variables that require your cache to be deleted.
 Configure will be re-run and you may have to reset some variables.
@@ -29,4 +29,4 @@ CMAKE_CXX_COMPILER= /usr/bin/g++-7
 -- Found CUDA: /opt/cuda (found suitable version "10.0", minimum required is "9") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/rafael/PFP_Ghowth/cmake-build-debug
+-- Build files have been written to: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug

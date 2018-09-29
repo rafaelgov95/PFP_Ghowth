@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="PFP_Ghowth" targetName="gpu_library_fp_growth" />
       <config projectName="PFP_Ghowth" targetName="cpu_library_fp_growth" />
+      <config projectName="PFP_Ghowth" targetName="gpu_library_fp_growth" />
       <config projectName="PFP_Ghowth" targetName="fp_cuda" />
     </generated>
   </component>
@@ -13,9 +13,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d087110a-f650-46e4-afa5-7e4aba5b4548" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.cu" afterDir="false" />
-    </list>
+    <list default="true" id="d087110a-f650-46e4-afa5-7e4aba5b4548" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,56 +28,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test_PFPGrowth.cu" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unit-test/Test_PFPGrowth.cu">
+      <file leaf-file-name="PFPTree.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PFPTree.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-386">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="620">
+              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+              <folding>
+                <element signature="e#601#621#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FPTransMap.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FPTransMap.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-            </state>
-          </provider>
+      <file leaf-file-name="catch.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit-test/catch.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Kernel.cu" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kernel.cu">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="206" column="36" selection-start-line="206" selection-start-column="36" selection-end-line="206" selection-end-column="36" />
+            <state relative-caret-position="220">
+              <caret line="208" selection-start-line="208" selection-end-line="208" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fp_cuda (disassembly)" pinned="false" current-in-tab="false">
-        <entry file="mock:///fp_cuda (disassembly)">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="240">
+              <caret line="12" column="29" selection-start-line="12" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fp_cuda (disassembly)" pinned="false" current-in-tab="false">
-        <entry file="mock:///fp_cuda (disassembly)">
+      <file leaf-file-name="PFPArray.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PFPArray.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fp_cuda (disassembly)" pinned="false" current-in-tab="false">
-        <entry file="mock:///fp_cuda (disassembly)">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="1040">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -87,8 +75,47 @@
       <file leaf-file-name="PFPGrowth.cu" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PFPGrowth.cu">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
+            <state relative-caret-position="1700">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cu" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cu">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+              <folding>
+                <element signature="e#21#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test_PFPGrowth.cu" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit-test/Test_PFPGrowth.cu">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rafael.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataset/rafael.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FPTransMap.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FPTransMap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -116,10 +143,10 @@
         <option value="$PROJECT_DIR$/include/PFPTree.h" />
         <option value="$PROJECT_DIR$/src/PFPArray.cpp" />
         <option value="$PROJECT_DIR$/include/Kernel.h" />
+        <option value="$PROJECT_DIR$/src/PFPGrowth.cu" />
         <option value="$PROJECT_DIR$/src/PFPTree.cpp" />
         <option value="$PROJECT_DIR$/dataset/rafael.txt" />
         <option value="$PROJECT_DIR$/unit-test/Test_PFPGrowth.cu" />
-        <option value="$PROJECT_DIR$/src/PFPGrowth.cu" />
         <option value="$PROJECT_DIR$/src/Kernel.cu" />
       </list>
     </option>
@@ -150,47 +177,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
+              <item name="PFP_Ghowth-dc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
+              <item name="PFP_Ghowth-dc" type="462c0819:PsiDirectoryNode" />
               <item name="dataset" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
+              <item name="PFP_Ghowth-dc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PFP_Ghowth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PFP_Ghowth" type="462c0819:PsiDirectoryNode" />
+              <item name="PFP_Ghowth-dc" type="462c0819:PsiDirectoryNode" />
               <item name="unit-test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -257,12 +273,13 @@
       <workItem from="1538050658602" duration="8830000" />
       <workItem from="1538075597379" duration="598000" />
       <workItem from="1538093361431" duration="1904000" />
-      <workItem from="1538165753277" duration="741000" />
+      <workItem from="1538165753277" duration="320000" />
+      <workItem from="1538194779710" duration="268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145714000" />
+    <option name="totallyTimeSpent" value="145561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,26 +292,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49414062" visible="true" weight="0.2641012" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6721311" visible="true" weight="0.2641012" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.41447368" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32785088" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5153509" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5153509" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2642544" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.4385965" />
-      <window_info id="Favorites" order="1" sideWeight="0.5058594" side_tool="true" visible="true" weight="0.2641012" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2642544" />
+      <window_info id="Favorites" order="1" sideWeight="0.32786885" side_tool="true" visible="true" weight="0.2641012" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.42872807" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,9 +605,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PFPGrowth.cu">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PFPTree.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="620">
           <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding>
             <element signature="e#601#621#0" expanded="true" />
@@ -599,38 +622,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unit-test/Test_PFPGrowth.cu">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/rafael.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FPTransMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="348">
           <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit-test/Test_PFPGrowth.cu">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PFPGrowth.cu">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kernel.cu">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="206" column="36" selection-start-line="206" selection-start-column="36" selection-end-line="206" selection-end-column="36" />
+        <state relative-caret-position="220">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>

@@ -150,13 +150,14 @@ __global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo
     __syncthreads();
     (*eloMapSizePointer)=index_new_elo_setmap;
     index_new_elo_setmap=0;
-    __syncthreads();
+//    __syncthreads();
      if (indexAtual <= index_elo_setmap && setMap[indexAtual].elo.suporte >= minimo && 0 != compare(setMap[indexAtual].elo.ItemId, "")) {
                     elo_k1[elo_k1_current].eloArray[atomicAdd(&index_new_elo_setmap, 1)] = setMap[indexAtual].elo;
+                printf("Thread %d Elo size %d AQUI %s %d\n",indexAtual,index_new_elo_setmap, elo_x[indexAtual].ItemId,elo_x[indexAtual].suporte);
                    elo_k1[elo_k1_current].size=index_new_elo_setmap;
 
            }
-    __syncthreads();
+
 
 
 }
@@ -204,7 +205,8 @@ __global__ void pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo
 //            }
                 frequencia_x << < 1,  (*elo_int_x), sizeof(SetMap) *  (*elo_int_x) >> >
                                                 (elo_k1, elo_cur, elo_xx, elo_int_x , (*minimo_suporte));
-                cudaDeviceSynchronize();
+                            cudaDeviceSynchronize();
+
 //            printf("AQUI DEPOIS %d\n", (*elo_int_x));
 //            for (int i = 0; i < (*elo_int_x); ++i) {
 //                printf("VOLTA DA FREQUENCIA   Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n",elo_cur,elo_xx[i].ItemId,elo_xx[i].indexArrayMap,elo_xx[i].suporte);
@@ -225,7 +227,7 @@ __global__ void pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo
 //                free(elo_x);
 
             }
-//            __syncthreads();
+            __syncthreads();
 
 
         }

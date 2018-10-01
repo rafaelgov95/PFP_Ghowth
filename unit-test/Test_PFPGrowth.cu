@@ -20,12 +20,11 @@ int main( int argc, char * argv[] ){
     using namespace std;
     ifstream read;
     string linha;
-    read.open("./../dataset/rafael.txt");
+    read.open("./../dataset/rafael_original.data");
     vector<Transaction> transactions;
     if(read.is_open()) {
         while (!read.eof()) {
             getline(read, linha);
-//            printf("%s\n", linha.c_str());
             istringstream iss(linha);
             vector<std::string> results(std::istream_iterator<std::string>{iss},
                                         std::istream_iterator<std::string>());
@@ -43,13 +42,10 @@ int main( int argc, char * argv[] ){
     double mtime;
     gettimeofday(&startc, NULL);
 
-     int minimum_support_threshold=3;
+     int minimum_support_threshold=1;
      PFPTree fptree{transactions, minimum_support_threshold};
         PFPArray pfp_array(fptree);
         if(pfp_array.arrayMap.size()>0){
-//    assert( std::numeric_limits<BitBlock>::digits == 8 );
-//    size_type block_size = std::numeric_limits<BitBlock>::digits;
-//    size_type blocks_per_row = ( pfp_array.arrayMap.size()-1 / block_size ) + ( n_trans % block_size > 0 ? 1 : 0 );
 
             PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1,minimum_support_threshold);
             gettimeofday(&end, NULL);
@@ -72,11 +68,7 @@ int main( int argc, char * argv[] ){
 //            o = 14, p = 15, q = 16, r = 17, s = 18, t = 19, u = 20, v = 21, w = 22, x = 23, y = 24, z = 25;
 //    // each line represents a transaction
 //    cuda_custom_trans_map::Items trans{
-//            f, a, c, d, g, i, m, p,
-//            a, b, c, f, l, m, o,
-//            b, f, h, j, o,
-//            b, c, k, s, p,
-//            a, f, c, e, l, p, m, n
+//
 //    };
 //    // start index of each transaction
 //    cuda_custom_trans_map::Indices indices{0, 8, 15, 20, 25};

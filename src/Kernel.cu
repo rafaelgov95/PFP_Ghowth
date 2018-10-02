@@ -27,6 +27,19 @@
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 
+
+__device__ volatile int sem = 0;
+
+__device__ void acquire_semaphore(volatile int *lock) {
+    while (atomicCAS((int *) lock, 0, 1) != 0);
+}
+
+__device__ void release_semaphore(volatile int *lock) {
+    *lock = 0;
+    __threadfence();
+}
+
+
 inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort = true) {
     if (code != cudaSuccess) {
         fprintf(stderr, "GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
@@ -81,66 +94,65 @@ __device__ char *my_cpcat(const char *array1, const char *array2, char *src) {
 
 __device__ unsigned int count = 0;
 __shared__ bool isLastBlockDone;
-__device__ int index_elo_setmap;
-__device__ int index_new_elo_setmap;
 __device__ int index_elo_put;
-__device__ int index_frequencia_elo;
-__device__ int teste;
+__device__ unsigned int indexSetMap = 0;
 
 
 __global__ void
-frequencia_x(__volatile__ EloVector *elo_k1, __volatile__ int elo_k1_current, Elo *set_elo, int *eloMapSizePointer,
-             int minimo) {
-//   extern __shared__ SetMap setMap[];
+
+
+frequencia_x2(__volatile__ EloVector *elo_k1, __volatile__ int elo_cur, Elo *set_elo, int *eloMapSizePointer,
+              int minimo) {
     auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x; //PC
     int eloMapSize = (*eloMapSizePointer);
-//    printf("Total  %d\n", eloMapSize);
 
     if (indexAtual < eloMapSize) {
+        printf("Thread ");
         bool newFlag = true;
         int indexSetMap = 0;
-        Elo *elo_new_put = (Elo *) malloc(sizeof(Elo));
-        printf("Sou Thread %d do Bloco %d Elo_k1 %s elox %s\n", indexAtual, blockIdx.x,
-               elo_k1[elo_k1_current].eloArray[indexAtual].ItemId, set_elo[indexAtual].ItemId);
-
-
-//        index_elo_setmap = 0;
-//        index_new_elo_setmap = 0;
-//
-//        __syncthreads();
-//
-//
-//        __syncthreads();
-//        while (newFlag && indexSetMap <= index_elo_setmap) {
-//            if ((0 == compare(elo_k1[elo_k1_current].eloArray[indexAtual].ItemId, set_elo[indexSetMap].ItemId)) &&
-//                (set_elo[indexSetMap].suporte >= minimo)) {
+        while (newFlag && indexSetMap < eloMapSize) {
+            if ((0 == compare(elo_k1[elo_cur].eloArray[indexAtual].ItemId, set_elo[indexSetMap].ItemId)) &&
+                (set_elo[indexSetMap].suporte >= minimo)) {
 //                elo_new_put[0] = elo_k1[elo_k1_current].eloArray[indexAtual];
-////                printf("Thread %d Elo size %d AQUI %s %d\n",threadIdx.x,indexAtual, elo_x[indexAtual].ItemId,elo_x[indexAtual].suporte);
-//                newFlag = false;
-//            }
-//            indexSetMap++;
+                printf("Thread %d Elo size %d AQUI %s %d\n",threadIdx.x,indexAtual, set_elo[indexAtual].ItemId,set_elo[indexAtual].suporte);
+                newFlag = false;
+            }
+            indexSetMap++;
+        }
+    }
+}
+
+__global__ void frequencia_x1(Elo *set_elo, int *eloMapSizePointer, Elo *eloSetTemp, int *eloSetTempSize) {
+    auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x; //PC
+    int eloMapSize = (*eloMapSizePointer);index_elo_put
+    if (indexAtual < eloMapSize) {
+
+        bool newFlag = true;
+
+        int index = 0;
+
+        while (newFlag && index < eloMapSize) {
+            acquire_semaphore(&sem);
+            if (0 == compare(eloSetTemp[index].ItemId, "")) {
 //
-//        }
-////        __syncthreads();
-////        memset(elo_x, 0, sizeof(Elo) * eloMapSize);
-////        __syncthreads();
-////
-////        if (elo_new_put[0].suporte != 0) {
-////            elo_x[atomicAdd(&index_new_elo_setmap, 1)] = elo_new_put[0];
-////        }
-////        __syncthreads();
-////        (*eloMapSizePointer) = index_new_elo_setmap;
-////        index_new_elo_setmap = 0;
-//////    __syncthreads();
-////        if (indexAtual <= index_elo_setmap && setMap[indexAtual].elo.suporte >= minimo &&
-////            0 != compare(setMap[indexAtual].elo.ItemId, "")) {
-////            elo_k1[elo_k1_current].eloArray[atomicAdd(&index_new_elo_setmap, 1)] = setMap[indexAtual].elo;
-////            printf("Thread %d Elo size %d AQUI %s %d\n", indexAtual, index_new_elo_setmap, elo_x[indexAtual].ItemId,
-////                   elo_x[indexAtual].suporte);
-////            elo_k1[elo_k1_current].size = index_new_elo_setmap;
-////
-////        }
-////
+                newFlag = false;
+                (*eloSetTempSize) = (*eloSetTempSize) + 1;
+                eloSetTemp[index] = set_elo[indexAtual];
+//                printf("Sou Thread %d do Bloco %d Elo_k1 %s elox %s\n", indexAtual, blockIdx.x,
+//                       elo_k1[elo_cur].eloArray[index].ItemId, set_elo[indexAtual].ItemId);
+
+            } else if (0 == compare(eloSetTemp[index].ItemId,
+                                    set_elo[indexAtual].ItemId)) {
+                newFlag = false;
+                eloSetTemp[index].suporte += set_elo[indexAtual].suporte;
+//                printf("Sou Igual Thread %d do Bloco %d Elo_k1 %s elox %s\n", indexAtual, blockIdx.x,
+//                       elo_k1[elo_cur].eloArray[index].ItemId, set_elo[indexAtual].ItemId);
+            } else {
+                index++;
+            }
+            release_semaphore(&sem);
+        }
+
     }
 
 }
@@ -199,23 +211,31 @@ pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr, ArrayMap 
 //                           elo_cur, elo_x[i].ItemId, elo_x[i].indexArrayMap,
 //                           elo_x[i].suporte);
 //                }
-
+                Elo *eloSetTemp = (Elo *) malloc(sizeof(Elo));
+                eloSetTemp = (Elo *) malloc(sizeof(Elo) * index_elo_put);
+                int *ss = (int *) malloc(sizeof(int));
                 int block_size = 16;
                 int blocks_per_row = (index_elo_put / block_size) + (index_elo_put % block_size > 0 ? 1 : 0);
                 printf("Quantidade de Blocos %d Total %d\n", blocks_per_row, index_elo_put);
-                frequencia_x << < blocks_per_row, block_size >> >
-                                                  (elo_k1, elo_cur, elo_x, elo_int_x, (*minimo_suporte));
+                frequencia_x1 << < blocks_per_row, block_size >> >
+                                                   (elo_x, elo_int_x, eloSetTemp, ss);
                 cudaDeviceSynchronize();
-                free(Elo_k1);
 
-//                printf("AQUI DEPOIS %d\n", (*elo_int_x));
-//                for (int i = 0; i < (*elo_int_x); ++i) {
-//                    printf("VOLTA DA FREQUENCIA   Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n", elo_cur,
-//                           elo_x[i].ItemId, elo_x[i].indexArrayMap,
-//                           elo_x[i].suporte);
-//                }
-//                index_elo_put = 0;
 
+                blocks_per_row = ( (*ss) / block_size) + ( (*ss) % block_size > 0 ? 1 : 0);
+
+                frequencia_x2 << < blocks_per_row, block_size >> >
+                                                   (elo_k1, elo_cur, eloSetTemp, ss, (*minimo_suporte));
+                cudaDeviceSynchronize();
+                printf("AQUI DEPOIS SETMAP TESTE = %d\n", (*ss));
+                for (int i = 0; i < (*ss); ++i) {
+                    printf("VOLTA DA FREQUENCIA SEMAP  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n", elo_cur,
+                           elo_k1[elo_cur].eloArray[i].ItemId, eloSetTemp[i].indexArrayMap,
+                           elo_k1[elo_cur].eloArray[i].suporte);
+                }
+//                free(Elo_k1);
+//                free(eloSetTemp->eloArray);
+//                free(eloSetTemp);
 
             }
         }

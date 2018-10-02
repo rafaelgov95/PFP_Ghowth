@@ -42,10 +42,12 @@ int main( int argc, char * argv[] ){
     double mtime;
     gettimeofday(&startc, NULL);
 
-     int minimum_support_threshold=1;
+     int minimum_support_threshold=3;
      PFPTree fptree{transactions, minimum_support_threshold};
+    printf("Terminou de fazer o FPTree \n");
         PFPArray pfp_array(fptree);
-        if(pfp_array.arrayMap.size()>0){
+    printf("Terminou de fazer o PFPArray \n");
+    if(pfp_array.arrayMap.size()>0){
 
             PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1,minimum_support_threshold);
             gettimeofday(&end, NULL);

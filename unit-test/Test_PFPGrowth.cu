@@ -20,7 +20,7 @@ int main( int argc, char * argv[] ){
     using namespace std;
     ifstream read;
     string linha;
-    read.open("./../dataset/rafael_original.data");
+    read.open("./../dataset/chess.data");
     vector<Transaction> transactions;
     if(read.is_open()) {
         while (!read.eof()) {

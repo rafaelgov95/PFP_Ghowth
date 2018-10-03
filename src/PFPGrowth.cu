@@ -51,7 +51,7 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
 
     data_host_elos_vector = (EloVector *)malloc(sizeof(EloVector)*eloPosMapSize);
     for (int j = 0; j < eloPosMapSize; ++j) {
-        data_host_elos_vector[j].eloArray=(Elo *)malloc(sizeof(Elo)*eloPosMapSize*100);
+        data_host_elos_vector[j].eloArray=(Elo *)malloc(sizeof(Elo)*eloPosMapSize*5000);
     }
 
     host_elos_vector_and_memory_pointer_elos = (EloVector*)malloc(eloPosMapSize * sizeof(EloVector));
@@ -59,8 +59,8 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     memcpy(host_elos_vector_and_memory_pointer_elos, data_host_elos_vector, eloPosMapSize * sizeof(EloVector));
 
     for (int i=0; i<eloPosMapSize; i++){
-        cudaMalloc(&(host_elos_vector_and_memory_pointer_elos[i].eloArray), eloPosMapSize*100*sizeof(Elo));
-        cudaMemcpy(host_elos_vector_and_memory_pointer_elos[i].eloArray, data_host_elos_vector[i].eloArray, eloPosMapSize*100*sizeof(Elo), cudaMemcpyHostToDevice);
+        cudaMalloc(&(host_elos_vector_and_memory_pointer_elos[i].eloArray), eloPosMapSize*5000*sizeof(Elo));
+        cudaMemcpy(host_elos_vector_and_memory_pointer_elos[i].eloArray, data_host_elos_vector[i].eloArray, eloPosMapSize*5000*sizeof(Elo), cudaMemcpyHostToDevice);
     }
 
     cudaMalloc((void **)&device_pointer_elo_vector, sizeof(EloVector)*eloPosMapSize);
@@ -83,11 +83,11 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     gpuErrchk(cudaMemcpy(device_elosize_inical,&eloPosMapSize, sizeof(int), cudaMemcpyHostToDevice));
     gpuErrchk(cudaMemcpy(device_minimo_suporte,&minimo_suporte, sizeof(int), cudaMemcpyHostToDevice));
     cudaEventRecord(start);
-    int block_size = 16;
+    int block_size = 32;
     int blocks_per_row = (eloPosMapSize / block_size ) + ( eloPosMapSize % block_size > 0 ? 1 : 0 );
 
     printf("Quantidade de bloco %d , Quantidade de thread final = %d\n",blocks_per_row,eloPosMapSize);
-    pfp_growth << < blocks_per_row,block_size, sizeof(Elo)*eloPosMapSize*22>>>
+    pfp_growth << < blocks_per_row,block_size>>>
                   (device_pointer_elo_vector,
                     deviceEloVectorSize,
                     device_ArrayMap,
@@ -98,18 +98,18 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     cudaEventRecord(stop);
 
     gpuErrchk(cudaPeekAtLastError());
-//    gpuErrchk(cudaDeviceSynchronize());
+    gpuErrchk(cudaDeviceSynchronize());
 
     for(int i =0;i<eloPosMapSize;++i) {
-        host_elos[i] = (Elo *) malloc(eloPosMapSize*100* sizeof(Elo)); //Tamanho ficou pequeno para o final
+        host_elos[i] = (Elo *) malloc(eloPosMapSize*5000* sizeof(Elo)); //Tamanho ficou pequeno para o final
     }
-
+//
     gpuErrchk(cudaMemcpy(host_elos_vector_and_memory_pointer_elos,device_pointer_elo_vector,sizeof(EloVector)*eloPosMapSize,cudaMemcpyDeviceToHost));
     gpuErrchk(cudaMemcpy(&hostEloVectorSize,deviceEloVectorSize,sizeof(int),cudaMemcpyDeviceToHost));
 
 
     for(int i =0;i<eloPosMapSize;++i){
-        gpuErrchk(cudaMemcpy(host_elos[i],host_elos_vector_and_memory_pointer_elos[i].eloArray,sizeof(Elo)*eloPosMapSize*100,cudaMemcpyDeviceToHost)); //Tamanho ficou pequeno para o final
+        gpuErrchk(cudaMemcpy(host_elos[i],host_elos_vector_and_memory_pointer_elos[i].eloArray,sizeof(Elo)*eloPosMapSize*5000,cudaMemcpyDeviceToHost)); //Tamanho ficou pequeno para o final
 
     }
     cudaEventSynchronize(stop);
@@ -120,10 +120,10 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     int intdex=0;
     memset(setMap,0,sizeof(SetMap)*eloPosMapSize);
 
-//    for (int k = 0; k < eloPosMapSize; ++k) {
-//        strcmp(setMap[k].elo.ItemId, " ");
-//    }
-//    printf("Numero de setMap %d\n",eloPosMapSize);
+    for (int k = 0; k < eloPosMapSize; ++k) {
+        strcmp(setMap[k].elo.ItemId, " ");
+    }
+    printf("Numero de setMap %d\n",eloPosMapSize);
     for (int k = 0; k < eloPosMapSize; ++k) {
 //        printf("Teste 1 %s\n",eloMap[k].ItemId);
         int i = 0;

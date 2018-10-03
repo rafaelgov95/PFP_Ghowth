@@ -18,7 +18,7 @@ vector
 thrust/device_vector.h
 -
 
-/home/rafael/Downloads/PFP_Ghowth-dc/src/FPTransMap.cpp
+/home/rafael/Documentos/PFP_Ghowth/src/FPTransMap.cpp
 algorithm
 -
 cassert
@@ -28,9 +28,9 @@ limits
 map
 -
 numeric
-/home/rafael/Downloads/PFP_Ghowth-dc/src/numeric
+/home/rafael/Documentos/PFP_Ghowth/src/numeric
 FPTransMap.h
-/home/rafael/Downloads/PFP_Ghowth-dc/src/FPTransMap.h
+/home/rafael/Documentos/PFP_Ghowth/src/FPTransMap.h
 
 /opt/cuda/include/builtin_types.h
 device_types.h

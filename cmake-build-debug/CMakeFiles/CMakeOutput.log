@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out"
 
 Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
 Compiler: /opt/cuda/bin/nvcc 
@@ -50,7 +50,7 @@ The output was:
 
 Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
 
-The CUDA compiler identification is NVIDIA, found in "/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCUDA/a.out"
+The CUDA compiler identification is NVIDIA, found in "/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCUDA/a.out"
 
 Parsed CUDA nvcc implicit link information from above output:
   found 'PATH=' string: [/opt/cuda/bin/../nvvm/bin:/opt/cuda/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl]
@@ -148,30 +148,30 @@ Parsed CUDA nvcc include information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_551bf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_551bf.dir/build.make CMakeFiles/cmTC_551bf.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_551bf.dir/testCXXCompiler.cxx.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_551bf.dir/testCXXCompiler.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_551bf
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_551bf.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_551bf.dir/testCXXCompiler.cxx.o  -o cmTC_551bf 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_3ef10/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ef10.dir/build.make CMakeFiles/cmTC_3ef10.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3ef10.dir/testCXXCompiler.cxx.o
+/usr/bin/g++-7     -o CMakeFiles/cmTC_3ef10.dir/testCXXCompiler.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3ef10
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ef10.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_3ef10.dir/testCXXCompiler.cxx.o  -o cmTC_3ef10 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7de30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7de30.dir/build.make CMakeFiles/cmTC_7de30.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_7de30
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7de30.dir/link.txt --verbose=1
-/usr/bin/g++-7      -v CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7de30 
+Run Build Command:"/usr/bin/make" "cmTC_ad2e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad2e5.dir/build.make CMakeFiles/cmTC_ad2e5.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++-7     -o CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ad2e5
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad2e5.dir/link.txt --verbose=1
+/usr/bin/g++-7      -v CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ad2e5 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper
@@ -181,24 +181,24 @@ Thread model: posix
 gcc version 7.3.1 20180814 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7de30' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3uJIjx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7de30 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7de30' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad2e5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFXNgnb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_ad2e5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad2e5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_7de30/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_7de30.dir/build.make CMakeFiles/cmTC_7de30.dir/build]
-  ignore line: [make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/g++-7     -o CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_7de30]
-  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7de30.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++-7      -v CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_7de30 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ad2e5/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ad2e5.dir/build.make CMakeFiles/cmTC_ad2e5.dir/build]
+  ignore line: [make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/g++-7     -o CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ad2e5]
+  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad2e5.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/g++-7      -v CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ad2e5 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper]
@@ -208,13 +208,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180814 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7de30' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3uJIjx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7de30 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad2e5' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFXNgnb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_ad2e5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc3uJIjx.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccFXNgnb.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -229,7 +229,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_7de30] ==> ignore
+    arg [cmTC_ad2e5] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o] ==> ignore
@@ -238,7 +238,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../..]
-    arg [CMakeFiles/cmTC_7de30.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ad2e5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -261,17 +261,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9f90d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9f90d.dir/build.make CMakeFiles/cmTC_9f90d.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9f90d.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++1z -o CMakeFiles/cmTC_9f90d.dir/feature_tests.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9f90d
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f90d.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_9f90d.dir/feature_tests.cxx.o  -o cmTC_9f90d 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_55c47/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55c47.dir/build.make CMakeFiles/cmTC_55c47.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_55c47.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++1z -o CMakeFiles/cmTC_55c47.dir/feature_tests.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_55c47
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55c47.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_55c47.dir/feature_tests.cxx.o  -o cmTC_55c47 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -334,17 +334,17 @@ make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-deb
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_39f89/fast"
-/usr/bin/make -f CMakeFiles/cmTC_39f89.dir/build.make CMakeFiles/cmTC_39f89.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_39f89.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++14 -o CMakeFiles/cmTC_39f89.dir/feature_tests.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_39f89
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39f89.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_39f89.dir/feature_tests.cxx.o  -o cmTC_39f89 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_1e758/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e758.dir/build.make CMakeFiles/cmTC_1e758.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1e758.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++14 -o CMakeFiles/cmTC_1e758.dir/feature_tests.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1e758
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e758.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_1e758.dir/feature_tests.cxx.o  -o cmTC_1e758 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -407,17 +407,17 @@ make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-deb
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c30a5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c30a5.dir/build.make CMakeFiles/cmTC_c30a5.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c30a5.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++11 -o CMakeFiles/cmTC_c30a5.dir/feature_tests.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c30a5
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c30a5.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_c30a5.dir/feature_tests.cxx.o  -o cmTC_c30a5 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0462a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0462a.dir/build.make CMakeFiles/cmTC_0462a.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0462a.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++11 -o CMakeFiles/cmTC_0462a.dir/feature_tests.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0462a
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0462a.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_0462a.dir/feature_tests.cxx.o  -o cmTC_0462a 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -480,17 +480,17 @@ make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-deb
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9350b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9350b.dir/build.make CMakeFiles/cmTC_9350b.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9350b.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++98 -o CMakeFiles/cmTC_9350b.dir/feature_tests.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9350b
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9350b.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_9350b.dir/feature_tests.cxx.o  -o cmTC_9350b 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0272f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0272f.dir/build.make CMakeFiles/cmTC_0272f.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0272f.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++98 -o CMakeFiles/cmTC_0272f.dir/feature_tests.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0272f
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0272f.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_0272f.dir/feature_tests.cxx.o  -o cmTC_0272f 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -551,36 +551,36 @@ make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-deb
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the CUDA compiler works passed with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_56b1a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_56b1a.dir/build.make CMakeFiles/cmTC_56b1a.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CUDA object CMakeFiles/cmTC_56b1a.dir/main.cu.o
-/opt/cuda/bin/nvcc     -x cu -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_56b1a.dir/main.cu.o
-Linking CUDA device code CMakeFiles/cmTC_56b1a.dir/cmake_device_link.o
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56b1a.dir/dlink.txt --verbose=1
-/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_56b1a.dir/main.cu.o -o CMakeFiles/cmTC_56b1a.dir/cmake_device_link.o 
-Linking CUDA executable cmTC_56b1a
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56b1a.dir/link.txt --verbose=1
-/opt/cuda/bin/g++    CMakeFiles/cmTC_56b1a.dir/main.cu.o CMakeFiles/cmTC_56b1a.dir/cmake_device_link.o -o cmTC_56b1a  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_4727d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4727d.dir/build.make CMakeFiles/cmTC_4727d.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_4727d.dir/main.cu.o
+/opt/cuda/bin/nvcc     -x cu -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_4727d.dir/main.cu.o
+Linking CUDA device code CMakeFiles/cmTC_4727d.dir/cmake_device_link.o
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4727d.dir/dlink.txt --verbose=1
+/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_4727d.dir/main.cu.o -o CMakeFiles/cmTC_4727d.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_4727d
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4727d.dir/link.txt --verbose=1
+/opt/cuda/bin/g++    CMakeFiles/cmTC_4727d.dir/main.cu.o CMakeFiles/cmTC_4727d.dir/cmake_device_link.o -o cmTC_4727d  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CUDA compiler ABI info compiled with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ff7da/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ff7da.dir/build.make CMakeFiles/cmTC_ff7da.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CUDA object CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o
-/opt/cuda/bin/nvcc     -x cu -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o
-Linking CUDA device code CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff7da.dir/dlink.txt --verbose=1
-/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o 
-Linking CUDA executable cmTC_ff7da
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff7da.dir/link.txt --verbose=1
-/opt/cuda/bin/g++   -v CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o -o cmTC_ff7da  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+Run Build Command:"/usr/bin/make" "cmTC_026cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_026cd.dir/build.make CMakeFiles/cmTC_026cd.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o
+/opt/cuda/bin/nvcc     -x cu -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o
+Linking CUDA device code CMakeFiles/cmTC_026cd.dir/cmake_device_link.o
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_026cd.dir/dlink.txt --verbose=1
+/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_026cd
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_026cd.dir/link.txt --verbose=1
+/opt/cuda/bin/g++   -v CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o -o cmTC_026cd  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
 Using built-in specs.
 COLLECT_GCC=/opt/cuda/bin/g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper
@@ -590,27 +590,27 @@ Thread model: posix
 gcc version 7.3.1 20180814 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ff7da' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI5Wsdf.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_ff7da /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/opt/cuda/lib64/stubs -L/opt/cuda/lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ff7da' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_026cd' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc65sIgg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_026cd /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/opt/cuda/lib64/stubs -L/opt/cuda/lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_026cd' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CUDA implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ff7da/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ff7da.dir/build.make CMakeFiles/cmTC_ff7da.dir/build]
-  ignore line: [make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CUDA object CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o]
-  ignore line: [/opt/cuda/bin/nvcc     -x cu -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o]
-  ignore line: [Linking CUDA device code CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o]
-  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff7da.dir/dlink.txt --verbose=1]
-  ignore line: [/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o ]
-  ignore line: [Linking CUDA executable cmTC_ff7da]
-  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff7da.dir/link.txt --verbose=1]
-  ignore line: [/opt/cuda/bin/g++   -v CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o -o cmTC_ff7da  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_026cd/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_026cd.dir/build.make CMakeFiles/cmTC_026cd.dir/build]
+  ignore line: [make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CUDA object CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [/opt/cuda/bin/nvcc     -x cu -c /opt/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [Linking CUDA device code CMakeFiles/cmTC_026cd.dir/cmake_device_link.o]
+  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_026cd.dir/dlink.txt --verbose=1]
+  ignore line: [/opt/cuda/bin/nvcc     -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o ]
+  ignore line: [Linking CUDA executable cmTC_026cd]
+  ignore line: [/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_026cd.dir/link.txt --verbose=1]
+  ignore line: [/opt/cuda/bin/g++   -v CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o -o cmTC_026cd  -L"/opt/cuda/lib64/stubs" -L"/opt/cuda/lib64" -lcudadevrt -lcudart_static -lrt -lpthread -ldl]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/cuda/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper]
@@ -620,13 +620,13 @@ Parsed CUDA implicit link information from above output:
   ignore line: [gcc version 7.3.1 20180814 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ff7da' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccI5Wsdf.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_ff7da /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/opt/cuda/lib64/stubs -L/opt/cuda/lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_026cd' '-L/opt/cuda/lib64/stubs' '-L/opt/cuda/lib64' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc65sIgg.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_026cd /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o -L/opt/cuda/lib64/stubs -L/opt/cuda/lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../.. CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_026cd.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccI5Wsdf.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc65sIgg.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -641,7 +641,7 @@ Parsed CUDA implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ff7da] ==> ignore
+    arg [cmTC_026cd] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/crtbeginS.o] ==> ignore
@@ -652,8 +652,8 @@ Parsed CUDA implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../..]
-    arg [CMakeFiles/cmTC_ff7da.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
-    arg [CMakeFiles/cmTC_ff7da.dir/cmake_device_link.o] ==> ignore
+    arg [CMakeFiles/cmTC_026cd.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+    arg [CMakeFiles/cmTC_026cd.dir/cmake_device_link.o] ==> ignore
     arg [-lcudadevrt] ==> lib [cudadevrt]
     arg [-lcudart_static] ==> lib [cudart_static]
     arg [-lrt] ==> lib [rt]
@@ -681,30 +681,30 @@ Parsed CUDA implicit link information from above output:
 
 
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_12a73/fast"
-/usr/bin/make -f CMakeFiles/cmTC_12a73.dir/build.make CMakeFiles/cmTC_12a73.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_12a73.dir/CheckIncludeFile.cxx.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_12a73.dir/CheckIncludeFile.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
-Linking CXX executable cmTC_12a73
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12a73.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_12a73.dir/CheckIncludeFile.cxx.o  -o cmTC_12a73 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_18020/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18020.dir/build.make CMakeFiles/cmTC_18020.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_18020.dir/CheckIncludeFile.cxx.o
+/usr/bin/g++-7     -o CMakeFiles/cmTC_18020.dir/CheckIncludeFile.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_18020
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18020.dir/link.txt --verbose=1
+/usr/bin/g++-7       CMakeFiles/cmTC_18020.dir/CheckIncludeFile.cxx.o  -o cmTC_18020 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f93c1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f93c1.dir/build.make CMakeFiles/cmTC_f93c1.dir/build
-make[1]: Entering directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f93c1.dir/CheckFunctionExists.cxx.o
-/usr/bin/g++-7    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f93c1.dir/CheckFunctionExists.cxx.o -c /home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_f93c1
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f93c1.dir/link.txt --verbose=1
-/usr/bin/g++-7   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f93c1.dir/CheckFunctionExists.cxx.o  -o cmTC_f93c1 -lpthread 
-make[1]: Leaving directory '/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9d2a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d2a7.dir/build.make CMakeFiles/cmTC_9d2a7.dir/build
+make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9d2a7.dir/CheckFunctionExists.cxx.o
+/usr/bin/g++-7    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9d2a7.dir/CheckFunctionExists.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_9d2a7
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d2a7.dir/link.txt --verbose=1
+/usr/bin/g++-7   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9d2a7.dir/CheckFunctionExists.cxx.o  -o cmTC_9d2a7 -lpthread 
+make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

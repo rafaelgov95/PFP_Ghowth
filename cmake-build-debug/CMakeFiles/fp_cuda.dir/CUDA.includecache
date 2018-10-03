@@ -90,21 +90,21 @@ thrust/device_vector.h
 math.h
 ../include/math.h
 
-/home/rafael/Downloads/PFP_Ghowth-dc/main.cu
+/home/rafael/Documentos/PFP_Ghowth/main.cu
 unit-test/Test_PFPGrowth.cu
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/Test_PFPGrowth.cu
+/home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
 
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/Test_PFPGrowth.cu
+/home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
 PFPTree.h
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/PFPTree.h
+/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPTree.h
 PFPArray.h
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/PFPArray.h
+/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPArray.h
 PFPGrowth.cu.h
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/PFPGrowth.cu.h
+/home/rafael/Documentos/PFP_Ghowth/unit-test/PFPGrowth.cu.h
 Kernel.h
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/Kernel.h
+/home/rafael/Documentos/PFP_Ghowth/unit-test/Kernel.h
 FPTransMap.h
-/home/rafael/Downloads/PFP_Ghowth-dc/unit-test/FPTransMap.h
+/home/rafael/Documentos/PFP_Ghowth/unit-test/FPTransMap.h
 time.h
 -
 sys/time.h

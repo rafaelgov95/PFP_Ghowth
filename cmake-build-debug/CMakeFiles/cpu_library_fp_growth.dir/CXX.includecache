@@ -64,7 +64,7 @@ thrust/device_vector.h
 math.h
 ../include/math.h
 
-/home/rafael/Downloads/PFP_Ghowth-dc/src/PFPArray.cpp
+/home/rafael/Documentos/PFP_Ghowth/src/PFPArray.cpp
 algorithm
 -
 cassert
@@ -80,11 +80,11 @@ cublas_v2.h
 PFPArray.h
 -
 PFPArray.h
-/home/rafael/Downloads/PFP_Ghowth-dc/src/PFPArray.h
+/home/rafael/Documentos/PFP_Ghowth/src/PFPArray.h
 Kernel.h
-/home/rafael/Downloads/PFP_Ghowth-dc/src/Kernel.h
+/home/rafael/Documentos/PFP_Ghowth/src/Kernel.h
 
-/home/rafael/Downloads/PFP_Ghowth-dc/src/PFPTree.cpp
+/home/rafael/Documentos/PFP_Ghowth/src/PFPTree.cpp
 algorithm
 -
 cassert
@@ -96,7 +96,7 @@ utility
 iostream
 -
 PFPTree.h
-/home/rafael/Downloads/PFP_Ghowth-dc/src/PFPTree.h
+/home/rafael/Documentos/PFP_Ghowth/src/PFPTree.h
 
 /opt/cuda/include/builtin_types.h
 device_types.h

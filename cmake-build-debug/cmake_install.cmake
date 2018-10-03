@@ -1,4 +1,4 @@
-# Install script for directory: /home/rafael/Downloads/PFP_Ghowth-dc
+# Install script for directory: /home/rafael/Documentos/PFP_Ghowth
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rafael/Downloads/PFP_Ghowth-dc/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

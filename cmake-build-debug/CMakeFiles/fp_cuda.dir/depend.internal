@@ -8,8 +8,8 @@ CMakeFiles/fp_cuda.dir/main.cu.o
  ../include/PFPGrowth.cu.h
  ../include/PFPTree.h
  ../include/cudaHeaders.h
- /home/rafael/Downloads/PFP_Ghowth-dc/main.cu
- /home/rafael/Downloads/PFP_Ghowth-dc/unit-test/Test_PFPGrowth.cu
+ /home/rafael/Documentos/PFP_Ghowth/main.cu
+ /home/rafael/Documentos/PFP_Ghowth/unit-test/Test_PFPGrowth.cu
  /opt/cuda/include/builtin_types.h
  /opt/cuda/include/crt/host_defines.h
  /opt/cuda/include/cuda.h

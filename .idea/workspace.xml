@@ -15,40 +15,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d087110a-f650-46e4-afa5-7e4aba5b4548" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CUDA.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CUDA.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/CUDA.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/CUDA.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/cmake_device_link.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/cmake_device_link.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/main.cu.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/main.cu.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/CUDA.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/CUDA.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/cmake_device_link.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fp_cuda.dir/main.cu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/FPTransMap.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/Kernel.cu.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PFP_Ghowth.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PFP_Ghowth.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fp_cuda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fp_cuda" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libgpu_library_fp_growth.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libgpu_library_fp_growth.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gpu_library_fp_growth.dir/src/PFPGrowth.cu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fp_cuda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcpu_library_fp_growth.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libgpu_library_fp_growth.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.cu" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -77,8 +53,8 @@
       <file leaf-file-name="Kernel.cu" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kernel.cu">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="226" column="92" selection-start-line="226" selection-start-column="92" selection-end-line="226" selection-end-column="92" />
+            <state relative-caret-position="435">
+              <caret line="262" column="17" lean-forward="true" selection-start-line="257" selection-start-column="26" selection-end-line="262" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -313,12 +289,12 @@
       <workItem from="1538395198242" duration="6161000" />
       <workItem from="1538405038864" duration="9627000" />
       <workItem from="1538437383172" duration="18224000" />
-      <workItem from="1538532328745" duration="3274000" />
+      <workItem from="1538532328745" duration="5659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195797000" />
+    <option name="totallyTimeSpent" value="198182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,7 +309,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6506718" visible="true" weight="0.2641012" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.65025467" visible="true" weight="0.2641012" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.41447368" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32785088" />
@@ -342,8 +318,8 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32894737" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.2642544" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.42872807" />
-      <window_info id="Favorites" order="1" sideWeight="0.34932822" side_tool="true" visible="true" weight="0.2641012" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.35416666" />
+      <window_info id="Favorites" order="1" sideWeight="0.34974533" side_tool="true" weight="0.2641012" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -686,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kernel.cu">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="226" column="92" selection-start-line="226" selection-start-column="92" selection-end-line="226" selection-end-column="92" />
+        <state relative-caret-position="435">
+          <caret line="262" column="17" lean-forward="true" selection-start-line="257" selection-start-column="26" selection-end-line="262" selection-end-column="17" />
         </state>
       </provider>
     </entry>

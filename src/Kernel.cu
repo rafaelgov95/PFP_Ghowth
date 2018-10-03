@@ -136,43 +136,62 @@ frequencia_x2(__volatile__ EloVector *elo_k1, __volatile__ int elo_cur, Elo *set
     }
 }
 
-__global__ void frequencia_x1(Elo *set_elo, int *eloMapSizePointer, Elo *eloSetTemp, int *eloSetTempSize) {
-    auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x; //PC
-    int eloMapSize = (*eloMapSizePointer);
-    if (indexAtual < eloMapSize) {
-        bool newFlag = true;
-        int index = 0;
-        while (newFlag && index < eloMapSize) {
-            acquire_semaphore(&sem);
-            if (0 == compare(eloSetTemp[index].ItemId, "")) {
-//
-                newFlag = false;
-                (*eloSetTempSize) = (*eloSetTempSize) + 1;
-                eloSetTemp[index] = set_elo[indexAtual];
+//__global__ void frequencia_x1(Elo *set_elo, int *eloMapSizePointer, Elo *eloSetTemp, int *eloSetTempSize) {
+//    auto indexAtual = blockIdx.x * blockDim.x + threadIdx.x; //PC
+//    int eloMapSize = (*eloMapSizePointer);
+//    if (indexAtual < eloMapSize) {
+//        bool newFlag = true;
+//        int index = 0;
+//        while (newFlag && index < eloMapSize) {
+//            acquire_semaphore(&sem);
+//            printf("Sou Thread %d\n",indexAtual);
+//            if (0 == compare(eloSetTemp[index].ItemId, "")) {
+////
+//                newFlag = false;
+//                (*eloSetTempSize) = (*eloSetTempSize) + 1;
+//                eloSetTemp[index] = set_elo[indexAtual];
 //                printf("Sou Thread %d do Bloco %d Elo_k1 %s elox %s\n", indexAtual, blockIdx.x,
 //                       eloSetTemp[index].ItemId, set_elo[indexAtual].ItemId);
-
-            } else if (0 == compare(eloSetTemp[index].ItemId,
-                                    set_elo[indexAtual].ItemId)) {
-                newFlag = false;
-                eloSetTemp[index].suporte += set_elo[indexAtual].suporte;
+//
+//            } else if (0 == compare(eloSetTemp[index].ItemId,
+//                                    set_elo[indexAtual].ItemId)) {
+//                newFlag = false;
+//                eloSetTemp[index].suporte += set_elo[indexAtual].suporte;
 //                printf("Sou Igual Thread %d do Bloco %d Elo_k1 %s elox %s\n", indexAtual, blockIdx.x,
 //                       eloSetTemp[index].ItemId, set_elo[indexAtual].ItemId);
-            } else {
+//            } else {
+//                index++;
+//            }
+//            release_semaphore(&sem);
+//        }
+//
+//    }
+//
+//}
+__device__ void frequencia_x1(Elo *set_elo, int eloMapSizePointer, Elo *eloSetTemp, int *eloSetTempSize){
+    for (int i = 0; i < eloMapSizePointer; ++i) {
+        int index=0;
+        bool newFlag = true;
+        while(newFlag && index<eloMapSizePointer){
+            if(0==compare(eloSetTemp[index].ItemId,"")){
+                (*eloSetTempSize)++;
+                eloSetTemp[index]=set_elo[i];
+                newFlag=false;
+            } else if (0 == compare(eloSetTemp[index].ItemId, set_elo[i].ItemId)) {
+                eloSetTemp[index].suporte+=set_elo[i].suporte;
+                newFlag=false;
+            }else{
                 index++;
             }
-            release_semaphore(&sem);
         }
-
     }
-
 }
+
 
 __global__ void
 pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr, ArrayMap *arrayMap, size_t arrayMapSize,
            Elo *elo_x, int *elo_int_x, int *minimo_suporte) {
     if (threadIdx.x == 0) {
-        printf("Chego \n");
         unsigned int value = atomicInc(&count, gridDim.x);
         isLastBlockDone = (value == (gridDim.x - 1));
     }
@@ -185,7 +204,6 @@ pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr, ArrayMap 
         index_elo_put = 0;
         bool flag = true;
         Elo *Elo_k1 = (Elo *) malloc(sizeof(Elo) * elo_x_size);
-        printf("Chego \n");
 
         auto indexThreadArrayMap = elo_x[indexAtual].indexArrayMap;
         auto indexParentArrayMap = elo_x[indexAtual].indexArrayMap;
@@ -210,26 +228,40 @@ pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr, ArrayMap 
         }
 
         __syncthreads();
-        printf("Chego pora \n");
         if (isLastBlockDone) {
-            printf("Chego 2 \n");
-
             if (temp == (index_elo_put - 1)) {
+
+
                 (*elo_int_x) = temp;
                 memset(elo_x, 0, sizeof(Elo) * index_elo_put);
                 memcpy(elo_x, elo_k1[elo_cur].eloArray, sizeof(Elo) * index_elo_put);
+
+//                printf("Combinacoes = %d\n", index_elo_put);
+//                for (int i = 0; i < index_elo_put; ++i) {
+//                    printf("ELO_X  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n", elo_cur,
+//                           elo_x[i].ItemId, elo_x[i].indexArrayMap,
+//                           elo_x[i].suporte);
+//                }
+
+
                 memset(elo_k1[elo_cur].eloArray, 0, sizeof(SetMap) * index_elo_put);
                 Elo *eloSetTemp = (Elo *) malloc(sizeof(Elo));
                 eloSetTemp = (Elo *) malloc(sizeof(Elo) * index_elo_put);
                 int *elo_set_map_size = (int *) malloc(sizeof(int));
                 int block_size = 16;
                 int blocks_per_row = (index_elo_put / block_size) + (index_elo_put % block_size > 0 ? 1 : 0);
-                printf("EU %d Frequencia 1 Quantidade de Blocos %d Total %d\n", indexAtual, blocks_per_row, index_elo_put);
-                frequencia_x1 << < blocks_per_row, block_size >> >
-                                                   (elo_x, elo_int_x, eloSetTemp, elo_set_map_size);
-                cudaDeviceSynchronize();
-//
-//
+//                printf("EU %d Frequencia 1 Quantidade de Blocos %d Total %d\n", indexAtual, blocks_per_row,
+                       index_elo_put);
+//                frequencia_x1 << < blocks_per_row, block_size >> >
+                frequencia_x1 (elo_x, index_elo_put, eloSetTemp, elo_set_map_size);
+//                cudaDeviceSynchronize();
+//                printf("Value Elo_x = %d\n", (*elo_set_map_size) );
+//                for (int i = 0; i < (*elo_set_map_size) ; ++i) {
+//                    printf("ELO_X  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n", elo_cur,
+//                           eloSetTemp[i].ItemId, eloSetTemp[i].indexArrayMap,
+//                           eloSetTemp[i].suporte);
+//                }
+////
                 blocks_per_row = ((*elo_set_map_size) / block_size) + ((*elo_set_map_size) % block_size > 0 ? 1 : 0);
                 printf("Frequancia 2 Quantidade de Blocos %d Total %d\n", blocks_per_row, (*elo_set_map_size));
                 frequencia_x2 << < blocks_per_row, block_size >> >
@@ -246,20 +278,18 @@ pfp_growth(__volatile__ EloVector *elo_k1, __volatile__ int *elo_curr, ArrayMap 
                 frequencia_x3 << < blocks_per_row, block_size >> >
                                                    (elo_k1, elo_cur, elo_x_temp, index_elo_put, elo_x, (*minimo_suporte));
                 cudaDeviceSynchronize();
-//                printf("Index Seze %d \n", indexSetMap);
-
-
+//                (*elo_curr) = (*elo_curr) + 1;
                 int x_threads = indexSetMap;
                 indexSetMap = 0;
                 if (x_threads > 0) {
                     (*elo_curr) = (*elo_curr) + 1;
-                    (*elo_int_x)=x_threads;
+                    (*elo_int_x) = x_threads;
                     blocks_per_row =
                             ((x_threads / block_size) + (x_threads) % block_size > 0 ? 1 : 0);
                     printf("pfp_growth new  Blocos %d Total %d\n", blocks_per_row, x_threads);
-                    count=0;
+                    count = 0;
                     pfp_growth << < blocks_per_row, block_size >> >
-                                       (elo_k1, elo_curr, arrayMap, arrayMapSize, elo_x, elo_int_x, minimo_suporte);
+                                                    (elo_k1, elo_curr, arrayMap, arrayMapSize, elo_x, elo_int_x, minimo_suporte);
                     cudaDeviceSynchronize();
                 }
 

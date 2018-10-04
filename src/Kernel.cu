@@ -284,22 +284,13 @@ __global__ void runKernel(__volatile__ EloVector *elo_k1, __volatile__ int *elo_
         printf("pfp_growth new Blocos %d Total %d\n", blocks_per_row, (*elo_int_x));
         pfp_growth<<<blocks_per_row,block_size>>>(elo_k1,elo_curr,arrayMap,arrayMapSize,elo_x,elo_int_x,minimo_suporte);
         cudaDeviceSynchronize();
-        int teste = index_elo_put;
-        printf("1  Thread %d block %d Value Elo_x = %d | new Valor = %d\n", threadIdx.x,
-               blockIdx.x, index_elo_put, teste);
-
+        printf("1  Thread %d block %d Value Elo_x = %d \n", threadIdx.x,
+               blockIdx.x, index_elo_put);
         memset(elo_x, 0, sizeof(Elo) * index_elo_put);
         memcpy(elo_x, elo_k1[elo_cur].eloArray, sizeof(Elo) * index_elo_put);
         memset(elo_k1[elo_cur].eloArray, 0, sizeof(SetMap) * index_elo_put);
         Elo *eloSetTemp = (Elo *) malloc(sizeof(Elo) * index_elo_put);
-        printf("2  Thread %d block %d Value Elo_x = %d | new Valor = %d\n", threadIdx.x,
-               blockIdx.x, index_elo_put, teste);
-//                for (int i = 0; i < index_elo_put; ++i) {
-//                    printf("index %d enchergo %d ELO_X  Round :%d  | ELO :%s | IndexArray :%d | Suporte :%d\n", i,index_elo_put,elo_cur,
-//                           elo_x[i].ItemId, elo_x[i].indexArrayMap,
-//                           elo_x[i].suporte);
-//                }
-         blocks_per_row = (index_elo_put / block_size) + (index_elo_put % block_size > 0 ? 1 : 0);
+        blocks_per_row = (index_elo_put / block_size) + (index_elo_put % block_size > 0 ? 1 : 0);
         printf("Frequencia 1 Quantidade de Blocos %d Total %d\n", blocks_per_row, index_elo_put);
         elo_set_map_size = 0;
         for (int i = 0; i < index_elo_put; ++i) {
@@ -346,7 +337,6 @@ __global__ void runKernel(__volatile__ EloVector *elo_k1, __volatile__ int *elo_
             count = 0;
             indexEloFim = 0;
             index_elo_put = 0;
-//                    memset(&index_elo_put,0, sizeof(int));
             indexSetMap = 0;
 //                    printf("Value Elo_x = %d\n", indexSetMap);
 //                    for (int i = 0; i < (*elo_int_x); ++i) {

@@ -28,7 +28,7 @@
 
 #include <iostream>
 #include <thrust/device_vector.h>
-#define MAX_STR_SIZE 16
+#define MAX_STR_SIZE 32
 
 
 struct PFPArrayMap {

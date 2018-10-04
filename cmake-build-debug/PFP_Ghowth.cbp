@@ -38,12 +38,12 @@
 					<Add directory="/opt/cuda/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -64,12 +64,12 @@
 					<Add directory="/opt/cuda/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -100,12 +100,12 @@
 					<Add directory="/opt/cuda/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -126,12 +126,12 @@
 					<Add directory="/opt/cuda/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -153,12 +153,12 @@
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/unit-test"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -180,12 +180,12 @@
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/src"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/include"/>
 					<Add directory="/home/rafael/Documentos/PFP_Ghowth/unit-test"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>

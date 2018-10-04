@@ -3,13 +3,13 @@
 
 # compile CUDA with /opt/cuda/bin/nvcc
 # compile CXX with /usr/bin/g++-7
-CUDA_FLAGS =  -rdc=true -shared -gencode arch=compute_50,code=sm_50 -lineinfo  
+CUDA_FLAGS =  -rdc=true -shared -gencode arch=compute_50,code=sm_50 -lineinfo -g  
 
 CUDA_DEFINES = -DUNIT_TEST
 
 CUDA_INCLUDES = -I/opt/cuda/include -I/home/rafael/Documentos/PFP_Ghowth/src -I/home/rafael/Documentos/PFP_Ghowth/include 
 
-CXX_FLAGS =  
+CXX_FLAGS = -g  
 
 CXX_DEFINES = -DUNIT_TEST
 

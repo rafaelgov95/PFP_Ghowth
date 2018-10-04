@@ -1,20 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_73a0b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_73a0b.dir/build.make CMakeFiles/cmTC_73a0b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_98f46/fast"
+/usr/bin/make -f CMakeFiles/cmTC_98f46.dir/build.make CMakeFiles/cmTC_98f46.dir/build
 make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_73a0b.dir/CheckSymbolExists.cxx.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_73a0b.dir/CheckSymbolExists.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-Linking CXX executable cmTC_73a0b
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73a0b.dir/link.txt --verbose=1
-/usr/bin/g++-7       CMakeFiles/cmTC_73a0b.dir/CheckSymbolExists.cxx.o  -o cmTC_73a0b 
-/usr/bin/ld: CMakeFiles/cmTC_73a0b.dir/CheckSymbolExists.cxx.o: na função "main":
+Building CXX object CMakeFiles/cmTC_98f46.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_98f46.dir/CheckSymbolExists.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_98f46
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98f46.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_98f46.dir/CheckSymbolExists.cxx.o  -o cmTC_98f46 
+/usr/bin/ld: CMakeFiles/cmTC_98f46.dir/CheckSymbolExists.cxx.o: na função "main":
 CheckSymbolExists.cxx:(.text+0x1b): referência não definida para "pthread_create"
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_73a0b.dir/build.make:98: cmTC_73a0b] Error 1
+make[1]: *** [CMakeFiles/cmTC_98f46.dir/build.make:98: cmTC_98f46] Error 1
 make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:126: cmTC_73a0b/fast] Error 2
+make: *** [Makefile:126: cmTC_98f46/fast] Error 2
 
 File /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -34,18 +34,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_832ab/fast"
-/usr/bin/make -f CMakeFiles/cmTC_832ab.dir/build.make CMakeFiles/cmTC_832ab.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d044f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d044f.dir/build.make CMakeFiles/cmTC_d044f.dir/build
 make[1]: Entering directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_832ab.dir/CheckFunctionExists.cxx.o
-/usr/bin/g++-7    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_832ab.dir/CheckFunctionExists.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_832ab
-/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_832ab.dir/link.txt --verbose=1
-/usr/bin/g++-7   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_832ab.dir/CheckFunctionExists.cxx.o  -o cmTC_832ab -lpthreads 
+Building CXX object CMakeFiles/cmTC_d044f.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d044f.dir/CheckFunctionExists.cxx.o -c /home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_d044f
+/opt/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d044f.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d044f.dir/CheckFunctionExists.cxx.o  -o cmTC_d044f -lpthreads 
 /usr/bin/ld: não foi possível localizar -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_832ab.dir/build.make:98: cmTC_832ab] Error 1
+make[1]: *** [CMakeFiles/cmTC_d044f.dir/build.make:98: cmTC_d044f] Error 1
 make[1]: Leaving directory '/home/rafael/Documentos/PFP_Ghowth/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:126: cmTC_832ab/fast] Error 2
+make: *** [Makefile:126: cmTC_d044f/fast] Error 2
 
 

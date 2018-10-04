@@ -32,7 +32,6 @@ using cuda_real = float;
 
 using Item = std::string;
 using Items = std::vector<Item>;
-using DItems = thrust::device_vector<Item>;
 using Transaction = std::vector<Item>;
 using TransformedPrefixPath = std::pair<std::vector<Item>, uint64_t>;
 using Pattern = std::pair<std::set<Item>, uint64_t>;

@@ -1,14 +1,8 @@
 /opt/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rafael/Documentos/PFP_Ghowth
--- Configuring done
-You have changed variables that require your cache to be deleted.
-Configure will be re-run and you may have to reset some variables.
-The following variables have changed:
-CMAKE_CXX_COMPILER= /usr/bin/g++-7
-
--- The CXX compiler identification is GNU 7.3.1
+-- The CXX compiler identification is GNU 8.2.1
 -- The CUDA compiler identification is NVIDIA 10.0.130
--- Check for working CXX compiler: /usr/bin/g++-7
--- Check for working CXX compiler: /usr/bin/g++-7 -- works
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features

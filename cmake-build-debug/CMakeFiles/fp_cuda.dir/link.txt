@@ -1,1 +1,1 @@
-/usr/bin/g++-7     CMakeFiles/fp_cuda.dir/main.cu.o CMakeFiles/fp_cuda.dir/cmake_device_link.o  -o fp_cuda  -L/opt/cuda/lib64/stubs  -L/opt/cuda/lib64 libcpu_library_fp_growth.a libgpu_library_fp_growth.a -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
+/usr/bin/g++-7  -g   CMakeFiles/fp_cuda.dir/main.cu.o CMakeFiles/fp_cuda.dir/cmake_device_link.o  -o fp_cuda  -L/opt/cuda/lib64/stubs  -L/opt/cuda/lib64  -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1 libcpu_library_fp_growth.a libgpu_library_fp_growth.a -lcudadevrt -lcudart_static -lrt -lpthread -ldl 

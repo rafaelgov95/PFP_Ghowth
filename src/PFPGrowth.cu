@@ -40,8 +40,6 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     Elo *device_elo_inicial;
     int *device_elosize_inical;
     int *device_minimo_suporte;
-
-
     EloVector *device_pointer_elo_vector, *host_elos_vector_and_memory_pointer_elos, *data_host_elos_vector;
     Elo *host_elos[eloPosMapSize];
     int *deviceEloVectorSize;
@@ -96,7 +94,7 @@ PFPGrowth::PFPGrowth(ArrayMap *arrayMap, Elo *eloMap, size_t arrayMapSize, size_
     cudaEventRecord(stop);
 
     gpuErrchk(cudaPeekAtLastError());
-    gpuErrchk(cudaDeviceSynchronize());
+//    gpuErrchk(cudaDeviceSynchronize());
 
     for (int i = 0; i < eloPosMapSize; ++i) {
         host_elos[i] = (Elo *) malloc(eloPosMapSize * 10000 * sizeof(Elo)); //Tamanho ficou pequeno para o final

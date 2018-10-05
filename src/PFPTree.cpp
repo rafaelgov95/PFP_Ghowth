@@ -1,5 +1,5 @@
 /*
-   Copyright 2016 Rafael Viana 01/09/18.
+   Copyright 2018 Rafael Viana 01/09/18.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -31,9 +31,9 @@ struct frequency_comparator {
     }
 };
 
-PFPLeaf::PFPLeaf(const std::shared_ptr<PFPNode>)
-//        :
-//        value(value), next(next)
+PFPLeaf::PFPLeaf(const std::shared_ptr<PFPNode> value)
+        : value(value)
+// next(next)
 {
 }
 
@@ -59,32 +59,8 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, int minimum_suppo
 
     }
 
-//    std::set<std::pair<Item, int>> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
-
-
-    // um problema esta aqui.
         std::set<std::pair<Item, int>, frequency_comparator> items_ordered_by_frequency(frequency_by_item.cbegin(), frequency_by_item.cend());
-
-
-    //Apelacao
-
-//    std::vector<std::pair<Item, uint64_t>> items_ordered_by_frequency;
-//    std::pair<Item, uint64_t> a = std::make_pair(("F"), uint64_t(4));
-//    std::pair<Item, uint64_t> b = std::make_pair("C", uint64_t(4));
-//    std::pair<Item, uint64_t> c = std::make_pair("A", uint64_t(3));
-//    std::pair<Item, uint64_t> d = std::make_pair("B", uint64_t(3));
-//    std::pair<Item, uint64_t> e = std::make_pair("M", uint64_t(3));
-//    std::pair<Item, uint64_t> f = std::make_pair("P", uint64_t(3));
-//
-//    items_ordered_by_frequency.push_back(a);
-//    items_ordered_by_frequency.push_back(b);
-//    items_ordered_by_frequency.push_back(c);
-//    items_ordered_by_frequency.push_back(d);
-//    items_ordered_by_frequency.push_back(e);
-//    items_ordered_by_frequency.push_back(f);
-
     auto curr_rootFolhas = rootFolhas;
-//
     curr_rootFolhas.get()->next = std::make_shared<PFPLeaf>(nullptr);
 
     for (const Transaction &transaction : transactions) {
@@ -113,11 +89,8 @@ PFPTree::PFPTree(const std::vector<Transaction> &transactions, int minimum_suppo
             }
 
         }
-
-        //corrigir criando atua no final
         curr_rootFolhas.get()->next = std::make_shared<PFPLeaf>(nullptr);
         curr_rootFolhas = curr_rootFolhas.get()->next;
-
     }
 }
 

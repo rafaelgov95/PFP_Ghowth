@@ -57,7 +57,6 @@ int main( int argc, char * argv[] ){
             mtime = useconds;
             mtime/=1000;
             mtime+=seconds*1000;
-            //cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
             double memXFers=5*4*COLUMNS*ROWS;
             memXFers/=1024*1024*1024;
 

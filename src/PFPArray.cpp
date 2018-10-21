@@ -20,18 +20,11 @@
 #include <cstdint>
 #include <utility>
 #include <cublas_v2.h>
-#include <PFPArray.h>
-#include "PFPArray.h"
-#include "Kernel.h"
+#include "../include/PFPArray.h"
 
 
-void cstringcpy(char *src, char * dest)
-{
-    while (*src) {
-        *(dest++) = *(src++);
-    }
-    *dest = '\0';
-}
+
+
 
 PFPArrayMap::PFPArrayMap(PFPNode *i, const int p, const int s) : ItemId(i), indexP(p), suporte(s) {
 }
@@ -43,6 +36,15 @@ PFPArray::PFPArray(const PFPTree &fptree) {
     eloPosStapOne();
 }
 
+
+
+void cstringcpy(const char *src,  char * dest)
+{
+    while (*src) {
+        *(dest++) = *(src++);
+    }
+    *dest = '\0';
+}
 
 void PFPArray::eloPosStapOne() {
     size_t size = sizeof(Elo) * (arrayMap.size()-1);

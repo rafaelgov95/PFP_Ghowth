@@ -15,7 +15,6 @@
  */
 
 
-#include "cudaHeaders.h"
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -30,9 +29,9 @@
 
 class PFPGrowth {
     ArrayMap*  arrayMap;
-    ArrayMap*  eloPos;
+    Elo*  eloPos;
 public:
-    PFPGrowth(ArrayMap *arrayMap,Elo *eloPos,size_t arrayMapSize,size_t eloPosSize, int minimo_suporte);
+    PFPGrowth(ArrayMap *_arrayMap,Elo *_eloPos,size_t _arrayMapSize,size_t _eloPosSize, int _minimo_suporte);
 
 };
 

@@ -1,44 +1,69 @@
+#include <time.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include "include/PFPArray.h"
+#include "include/PFPTree.h"
+#include "include/PFPGrowth.cu.h"
 
+#define COLUMNS 500
+#define ROWS 500
+int main( int argc, char * argv[] ){
+    using namespace std;
+    ifstream read;
+    string linha;
+    read.open("./dataset/chess.data");
+    vector<Transaction> transactions;
+    if(read.is_open()) {
+        while (!read.eof()) {
+            getline(read, linha);
+            istringstream iss(linha);
+            vector<string> results(std::istream_iterator<std::string>{iss},
+                                        std::istream_iterator<std::string>());
+            for(auto const& value: results) {
+         	   printf("%s ",value.c_str());
+            }
+      	    printf("\n");
 
+            transactions.push_back(results);
 
+        }
+        read.close();
+    } else{
+        printf("Not Working \n");
+    }
+    printf("Terminou de fazer o Mapa \n");
 
-#ifdef UNIT_TEST
-#include "unit-test/Test_PFPGrowth.cu"
+    struct timeval startc, end;
+    long seconds, useconds;
+    double mtime;
+    gettimeofday(&startc, NULL);
 
+     int minimum_support_threshold=1;
+     PFPTree fptree{transactions, minimum_support_threshold};
+     printf("Terminou de fazer o FPTree \n");
+     PFPArray pfp_array(fptree);
+     printf("Terminou de fazer o PFPArray \n");
+    if(pfp_array.arrayMap.size()>0){
+            PFPGrowth pfpGrowth(pfp_array._arrayMap,pfp_array._eloMap,pfp_array.arrayMap.size(),pfp_array.arrayMap.size()-1,minimum_support_threshold);
+            gettimeofday(&end, NULL);
 
-//
+            seconds  = end.tv_sec  - startc.tv_sec;
+            useconds = end.tv_usec - startc.tv_usec;
+            mtime = useconds;
+            mtime/=1000;
+            mtime+=seconds*1000;
+            double memXFers=5*4*COLUMNS*ROWS;
+            memXFers/=1024*1024*1024;
 
-#else
-//
+            printf("\n CPU : %g ms bandwidth %g GB/s",mtime, memXFers/(mtime/1000.0));
+            std::cout << "All tests passed!" << std::endl;
+        }else{
+            printf("MINIMO DE CANDIDATO NÃO EXISTENTE \n");
+        }
 
-//#include <FPRadixTree.h>
-//#include "FPTransMap.h"
-//int  main() {
-//    const cuda_fp_growth::Item a = 0, b = 1, c = 2, d = 3, e = 4, f = 5, g = 6, h = 7, i = 8, j = 9, k = 10, l = 11, m = 12, n = 13,
-//            o = 14, p = 15, q = 16, r = 17, s = 18, t = 19, u = 20, v = 21, w = 22, x = 23, y = 24, z = 25;
-//
-//    // each line represents a transaction
-//    cuda_fp_growth::Items trans{
-//            f, a, c, d, g, i, m, p,
-//            a, b, c, f, l, m, o,
-//            b, f, h, j, o,
-//            b, c, k, s, p,
-//            a, f, c, e, l, p, m, n
-//    };
-//
-//    // start index of each transaction
-//    cuda_fp_growth::Indices indices{0, 8, 15, 20, 25};
-//
-//    // number of items in each transaction
-//    cuda_fp_growth::Sizes sizes{8, 7, 5, 5, 8};
-//
-//    // construct FPTransactionMap object
-//    cuda_fp_growth::FPTransMap fp_trans_map(trans.cbegin(), indices.cbegin(), sizes.cbegin(), indices.size(), 3);
-//    cuda_fp_growth::FPRadixTree fp_radix_tree(fp_trans_map);
-//    return 0;
+    return 0;
 }
-//extern "C"
-//{
-//}
-
-#endif  // UNIT_TEST

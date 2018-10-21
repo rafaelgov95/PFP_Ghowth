@@ -30,6 +30,7 @@
 #include <thrust/device_vector.h>
 #define MAX_STR_SIZE 32
 
+void cstringcpy(const char *src,  char * dest);
 
 struct PFPArrayMap {
     PFPNode *ItemId;
@@ -39,11 +40,46 @@ struct PFPArrayMap {
     PFPArrayMap(PFPNode *, const int, const int);
 
 };
-typedef struct {
-     char ItemId[MAX_STR_SIZE];
+
+ struct Elo {
+    char ItemId[MAX_STR_SIZE];
     cuda_int indexArrayMap;
     cuda_int suporte;
-} Elo;
+    Elo(const Elo& a){
+           	cstringcpy(a.ItemId,ItemId);
+               indexArrayMap=a.indexArrayMap;
+               suporte=a.suporte;
+           }
+    Elo& operator=(const Elo& a)
+        {
+        	cstringcpy(a.ItemId,ItemId);
+            indexArrayMap=a.indexArrayMap;
+            suporte=a.suporte;
+            return *this;
+        }
+
+    	Elo operator+(Elo a) const
+        {
+    		a.suporte;
+    		return *this;
+//    		return Elo(a);
+    //		return x;
+    //		  a.suporte+=suporte;
+    //		  return *this;
+    //        return Elo(a.suporte+suporte);
+        }
+        bool operator==(const Elo& a) const
+        {
+            return (ItemId == a.ItemId);
+        }
+
+        Elo& operator[] (char* a) {
+        	int i=0;
+//        	while(0!=strcmp(v[i]->ItemId,a));
+//        	i++;
+//            return v[i];
+              }
+};
 
 typedef struct {
      char ItemId[MAX_STR_SIZE];

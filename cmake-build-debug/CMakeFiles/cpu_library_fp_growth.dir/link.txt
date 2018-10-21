@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcpu_library_fp_growth.a  CMakeFiles/cpu_library_fp_growth.dir/src/PFPArray.cpp.o CMakeFiles/cpu_library_fp_growth.dir/src/PFPTree.cpp.o
-/usr/bin/ranlib libcpu_library_fp_growth.a

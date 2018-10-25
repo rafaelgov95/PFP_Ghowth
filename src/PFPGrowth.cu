@@ -39,7 +39,7 @@ PFPGrowth::PFPGrowth(ArrayMap *_arrayMap, Elo *_eloMap, size_t arrayMapSize, siz
     Elo  *host_eloMap = (Elo *) malloc(eloPosMapSize * 1048576 * sizeof(Elo));
     cudaMalloc((void **) &device_pointer_elo_vector, sizeof(Elo) * 331238);
 
-    gpuErrchk(cudaMalloc((void **) &device_elo_inicial, sizeof(Elo) * 10048576));
+    gpuErrchk(cudaMalloc((void **) &device_elo_inicial, sizeof(Elo) * 90000));
 
     gpuErrchk(cudaMalloc((void **) &device_ArrayMap, sizeof(ArrayMap) * arrayMapSize));
     gpuErrchk(cudaMalloc((void **) &deviceEloVectorSize, sizeof(int)));

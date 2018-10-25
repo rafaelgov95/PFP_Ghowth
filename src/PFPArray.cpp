@@ -22,10 +22,6 @@
 #include <cublas_v2.h>
 #include "../include/PFPArray.h"
 
-
-
-
-
 PFPArrayMap::PFPArrayMap(PFPNode *i, const int p, const int s) : ItemId(i), indexP(p), suporte(s) {
 }
 

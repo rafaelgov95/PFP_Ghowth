@@ -195,7 +195,6 @@ geracao_de_candidatos(Elo **temp_elo_x, ArrayMap *arrayMap,
                  my_cpcat(elo_x[indexAtual].ItemId,arrayMap[indexParentArrayMap].ItemId,temp_elo_x[temp]->ItemId);
                  temp_elo_x[temp]->indexArrayMap = indexParentArrayMap;
                  temp_elo_x[temp]->suporte = elo_x[indexAtual].suporte;
-//                 frequencia_x1_device(new_canditatos_cont_suporte,temp_elo_x[temp]);
 
             } else {
                 flag = false;
@@ -256,7 +255,6 @@ __global__ void frequencia_x1_paralela(Elo** new_canditatos_cont_suporte, int *n
 
 __global__ void frequencia_x1(Elo** new_canditatos_cont_suporte, int *new_canditatos_cont_suporte_size , Elo** new_canditatos, int new_canditatos_size){
 	        for (int i = 0; i < new_canditatos_size; ++i){
-	        	printf("%d \n",i);
 	            int index = 0;
 	            bool newFlag = true;
 	            while (newFlag) {
@@ -291,25 +289,20 @@ runKernel( Elo *elo_k1,  int *elo_curr, ArrayMap *arrayMap, int arrayMapSize,
         printf("Round %d pfp_growth new Blocos %d Total %d\n",roud, blocks_per_row, (*elo_int_x));
         printf("arrayMapSize  %d\n",sizeof(Elo));
 
-        Elo **new_canditatos=(Elo**)malloc(sizeof(Elo)*(*elo_int_x)*arrayMapSize);
-//        memset(new_canditatos,0,sizeof(Elo)*331238);
-//                for(int i=0;i<(*elo_int_x)*arrayMapSize;++i){
-//                	new_canditatos[i]=(Elo*)malloc(sizeof(Elo));
-//                }
+        Elo **new_canditatos=(Elo**)malloc(sizeof(Elo*)*(*elo_int_x)*arrayMapSize);
+
+
         geracao_de_candidatos << < blocks_per_row, block_size >> >
                                                    (new_canditatos, arrayMap, arrayMapSize, elo_x, elo_int_x, minimo_suporte);
         cudaDeviceSynchronize();
 
-//        thrust::device_vector < int > D;
 
         Elo **new_canditatos_cont_suporte=(Elo**)malloc(sizeof(Elo*)*index_elo_put);
 
         blocks_per_row = (index_elo_put / block_size) + (index_elo_put % block_size > 0 ? 1 : 0);
         aloc<<<blocks_per_row,block_size>>>(new_canditatos_cont_suporte,index_elo_put);
-//        cudaDeviceSynchronize();
-//
-//
-//
+        cudaDeviceSynchronize();
+
         printf("Frequencia 1 Quantidade de Blocos %d Total %d\n", 1, 1);
         int *new_canditatos_cont_suporte_size=(int*)malloc(sizeof(int));
         (*new_canditatos_cont_suporte_size)=0;

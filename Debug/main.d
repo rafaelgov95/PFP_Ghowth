@@ -259,7 +259,7 @@
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_vector.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_bvector.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/vector.tcc \
-    ../include/PFPArray.h \
+    ../include/PFPArray.cu.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/map \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_tree.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/aligned_buffer.h \

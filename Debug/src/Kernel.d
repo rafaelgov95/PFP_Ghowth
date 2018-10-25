@@ -155,7 +155,7 @@ src/Kernel.o : ../src/Kernel.cu \
     /usr/include/stdint.h \
     /usr/include/bits/wchar.h \
     /usr/include/bits/stdint-uintn.h \
-    ../src/../include/PFPArray.h \
+    ../src/../include/PFPArray.cu.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cstdint \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/map \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_tree.h \

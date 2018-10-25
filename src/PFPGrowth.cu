@@ -15,7 +15,7 @@
  */
 
 #include "../include/Kernel.h"
-#include "../include/PFPArray.h"
+#include "../include/PFPArray.cu.h"
 #include "../include/PFPGrowth.cu.h"
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
@@ -27,10 +27,17 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort =
     }
 }
 
+
+
+
+
+
 PFPGrowth::PFPGrowth(ArrayMap *_arrayMap, Elo *_eloMap, size_t arrayMapSize, size_t eloPosMapSize, int minimo_suporte):eloPos(_eloMap),arrayMap(_arrayMap){
     ArrayMap *device_ArrayMap;
     Elo *device_pointer_elo_vector;
     Elo *device_elo_inicial;
+    Elo fdevice_elo_inicial;
+
     int *device_elosize_inical;
     int *deviceEloVectorSize;
     int *device_minimo_suporte;

@@ -20,15 +20,71 @@
 #include <cstdint>
 #include <utility>
 #include <cublas_v2.h>
-#include "../include/PFPArray.h"
-
-
+#include "../include/PFPArray.cu.h"
 
 
 
 PFPArrayMap::PFPArrayMap(PFPNode *i, const int p, const int s) : ItemId(i), indexP(p), suporte(s) {
+
 }
 
+__device__ __host__ int compare(const char *String_1, const char *String_2) {
+    char TempChar_1,
+            TempChar_2;
+
+    do {
+        TempChar_1 = *String_1++;
+        TempChar_2 = *String_2++;
+    } while (TempChar_1 && TempChar_1 == TempChar_2);
+
+    return TempChar_1 - TempChar_2;
+}
+
+
+__device__ __host__  void cstringcpy(const char *src,  char * dest)
+{
+    while (*src) {
+        *(dest++) = *(src++);
+    }
+    *dest = '\0';
+}
+
+__device__ __host__  Elo::Elo(){
+
+}
+
+__device__ __host__  Elo::Elo(Elo& a){
+	cstringcpy(a.ItemId,this->ItemId);
+	this->indexArrayMap=a.indexArrayMap;
+	this->suporte=a.suporte;
+}
+
+
+__device__   Elo*  EloArray::operator[] ( Elo* x) {
+
+		         printf("size %d\n",(*size));
+
+			for(int i=0;i<(*size);++i){
+				if(0==compare(elo[i]->ItemId,x->ItemId)){
+					//	         printf("Elo %s | size= %d\n",x->ItemId,ti);
+
+					return elo[i];
+				}
+			}
+	         int ti = atomicAdd(size,1);
+
+	         elo[ti]=x;
+	         printf("Elo %s | size= %d\n",x->ItemId,ti);
+
+	         return elo[ti] ;
+}
+
+
+__device__ __host__  void Elo::operator=( Elo* a){
+	        cstringcpy(a->ItemId,this->ItemId);
+			this->indexArrayMap=a->indexArrayMap;
+			this->suporte=a->suporte;
+}
 
 PFPArray::PFPArray(const PFPTree &fptree) {
     fptree.root.get()->frequency = -1;
@@ -38,13 +94,6 @@ PFPArray::PFPArray(const PFPTree &fptree) {
 
 
 
-void cstringcpy(const char *src,  char * dest)
-{
-    while (*src) {
-        *(dest++) = *(src++);
-    }
-    *dest = '\0';
-}
 
 void PFPArray::eloPosStapOne() {
     size_t size = sizeof(Elo) * (arrayMap.size()-1);

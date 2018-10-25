@@ -21,9 +21,9 @@
 #include <cuda_runtime_api.h>
 #include <cstdio>
 #include "cuda.h"
-#include "PFPArray.h"
+#include "PFPArray.cu.h"
 //__global__ void frequencia_x(__volatile__ EloVector *elo_k1,__volatile__ int elo_k1_current, Elo *elo_x, int *eloMapSizePointer, int minimo) ;
-__global__ void geracao_de_candidatos( volatile Elo **Elo_k1, int *Elo_k1_size,ArrayMap *arrayMap, int arrayMapSize,Elo *elo , int *elosize, int *minimo_suporte);
+__global__ void geracao_de_candidatos(volatile Elo **Elo_k1, int *Elo_k1_size,ArrayMap *arrayMap, int arrayMapSize,Elo *elo , int *elosize, int *minimo_suporte);
 __global__ void runKernel(Elo *Elo_k1, int *Elo_k1_size,ArrayMap *arrayMap, int arrayMapSize,Elo *elo , int *elosize, int *minimo_suporte);
 
 //__global__ void run(EloVector *Elo_k1,int *Elo_k1_size,ArrayMap *arrayMap, size_t arrayMapSize,Elo *elo ,int *elosize, int *minimo_suporte);

@@ -1,53 +1,90 @@
-src/PFPArray.o : ../src/PFPArray.cpp \
+src/PFPArray.o : ../src/PFPArray.cu \
     /usr/include/stdc-predef.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/algorithm \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/utility \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/c++config.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/os_defines.h \
+    /opt/cuda/bin/..//include/cuda_runtime.h \
+    /opt/cuda/bin/..//include/crt/host_config.h \
     /usr/include/features.h \
     /usr/include/sys/cdefs.h \
     /usr/include/bits/wordsize.h \
     /usr/include/bits/long-double.h \
     /usr/include/gnu/stubs.h \
     /usr/include/gnu/stubs-64.h \
+    /opt/cuda/bin/..//include/builtin_types.h \
+    /opt/cuda/bin/..//include/device_types.h \
+    /opt/cuda/bin/..//include/crt/host_defines.h \
+    /opt/cuda/bin/..//include/driver_types.h \
+    /opt/cuda/bin/..//include/vector_types.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed/limits.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed/syslimits.h \
+    /usr/include/limits.h \
+    /usr/include/bits/libc-header-start.h \
+    /usr/include/bits/posix1_lim.h \
+    /usr/include/bits/local_lim.h \
+    /usr/include/linux/limits.h \
+    /usr/include/bits/posix2_lim.h \
+    /usr/include/bits/xopen_lim.h \
+    /usr/include/bits/uio_lim.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/stddef.h \
+    /opt/cuda/bin/..//include/surface_types.h \
+    /opt/cuda/bin/..//include/texture_types.h \
+    /opt/cuda/bin/..//include/library_types.h \
+    /opt/cuda/bin/..//include/channel_descriptor.h \
+    /opt/cuda/bin/..//include/cuda_runtime_api.h \
+    /opt/cuda/bin/..//include/cuda_device_runtime_api.h \
+    /opt/cuda/bin/..//include/driver_functions.h \
+    /opt/cuda/bin/..//include/vector_functions.h \
+    /opt/cuda/bin/..//include/vector_functions.hpp \
+    /opt/cuda/bin/..//include/crt/common_functions.h \
+    /usr/include/string.h \
+    /usr/include/bits/types/locale_t.h \
+    /usr/include/bits/types/__locale_t.h \
+    /usr/include/strings.h \
+    /usr/include/time.h \
+    /usr/include/bits/time.h \
+    /usr/include/bits/types.h \
+    /usr/include/bits/typesizes.h \
+    /usr/include/bits/timex.h \
+    /usr/include/bits/types/struct_timeval.h \
+    /usr/include/bits/types/clock_t.h \
+    /usr/include/bits/types/time_t.h \
+    /usr/include/bits/types/struct_tm.h \
+    /usr/include/bits/types/struct_timespec.h \
+    /usr/include/bits/types/clockid_t.h \
+    /usr/include/bits/types/timer_t.h \
+    /usr/include/bits/types/struct_itimerspec.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/new \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/c++config.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/os_defines.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_relops.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_pair.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/exception \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception_ptr.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception_defines.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/cxxabi_init_exception.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/typeinfo \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/hash_bytes.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/nested_exception.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/move.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/concept_check.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/type_traits \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/initializer_list \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_algobase.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/functexcept.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception_defines.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/cpp_type_traits.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/type_traits.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/numeric_traits.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator_base_types.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator_base_funcs.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/debug/assertions.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/ptr_traits.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/debug/debug.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/predefined_ops.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_algo.h \
+    /usr/include/stdio.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/stdarg.h \
+    /usr/include/bits/types/__fpos_t.h \
+    /usr/include/bits/types/__mbstate_t.h \
+    /usr/include/bits/types/__fpos64_t.h \
+    /usr/include/bits/types/__FILE.h \
+    /usr/include/bits/types/FILE.h \
+    /usr/include/bits/types/struct_FILE.h \
+    /usr/include/bits/types/cookie_io_functions_t.h \
+    /usr/include/bits/stdio_lim.h \
+    /usr/include/bits/sys_errlist.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/stdlib.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cstdlib \
     /usr/include/stdlib.h \
-    /usr/include/bits/libc-header-start.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/stddef.h \
     /usr/include/bits/waitflags.h \
     /usr/include/bits/waitstatus.h \
     /usr/include/bits/floatn.h \
     /usr/include/bits/floatn-common.h \
-    /usr/include/bits/types/locale_t.h \
-    /usr/include/bits/types/__locale_t.h \
     /usr/include/sys/types.h \
-    /usr/include/bits/types.h \
-    /usr/include/bits/typesizes.h \
-    /usr/include/bits/types/clock_t.h \
-    /usr/include/bits/types/clockid_t.h \
-    /usr/include/bits/types/time_t.h \
-    /usr/include/bits/types/timer_t.h \
     /usr/include/bits/stdint-intn.h \
     /usr/include/endian.h \
     /usr/include/bits/endian.h \
@@ -57,33 +94,86 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /usr/include/bits/select.h \
     /usr/include/bits/types/sigset_t.h \
     /usr/include/bits/types/__sigset_t.h \
-    /usr/include/bits/types/struct_timeval.h \
-    /usr/include/bits/types/struct_timespec.h \
     /usr/include/bits/pthreadtypes.h \
     /usr/include/bits/thread-shared-types.h \
     /usr/include/bits/pthreadtypes-arch.h \
     /usr/include/alloca.h \
     /usr/include/bits/stdlib-float.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/std_abs.h \
+    /usr/include/assert.h \
+    /opt/cuda/bin/..//include/crt/math_functions.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/math.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cmath \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/cpp_type_traits.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/type_traits.h \
+    /usr/include/math.h \
+    /usr/include/bits/math-vector.h \
+    /usr/include/bits/libm-simd-decl-stubs.h \
+    /usr/include/bits/flt-eval-method.h \
+    /usr/include/bits/fp-logb.h \
+    /usr/include/bits/fp-fast.h \
+    /usr/include/bits/mathcalls-helper-functions.h \
+    /usr/include/bits/mathcalls.h \
+    /usr/include/bits/mathcalls-narrow.h \
+    /usr/include/bits/iscanonical.h \
+    /opt/cuda/bin/..//include/crt/math_functions.hpp \
+    /opt/cuda/bin/..//include/cuda_surface_types.h \
+    /opt/cuda/bin/..//include/cuda_texture_types.h \
+    /opt/cuda/bin/..//include/crt/device_functions.h \
+    /opt/cuda/bin/..//include/crt/device_functions.hpp \
+    /opt/cuda/bin/..//include/device_atomic_functions.h \
+    /opt/cuda/bin/..//include/device_atomic_functions.hpp \
+    /opt/cuda/bin/..//include/crt/device_double_functions.h \
+    /opt/cuda/bin/..//include/crt/device_double_functions.hpp \
+    /opt/cuda/bin/..//include/sm_20_atomic_functions.h \
+    /opt/cuda/bin/..//include/sm_20_atomic_functions.hpp \
+    /opt/cuda/bin/..//include/sm_32_atomic_functions.h \
+    /opt/cuda/bin/..//include/sm_32_atomic_functions.hpp \
+    /opt/cuda/bin/..//include/sm_35_atomic_functions.h \
+    /opt/cuda/bin/..//include/sm_60_atomic_functions.h \
+    /opt/cuda/bin/..//include/sm_60_atomic_functions.hpp \
+    /opt/cuda/bin/..//include/sm_20_intrinsics.h \
+    /opt/cuda/bin/..//include/sm_20_intrinsics.hpp \
+    /opt/cuda/bin/..//include/sm_30_intrinsics.h \
+    /opt/cuda/bin/..//include/sm_30_intrinsics.hpp \
+    /opt/cuda/bin/..//include/sm_32_intrinsics.h \
+    /opt/cuda/bin/..//include/sm_32_intrinsics.hpp \
+    /opt/cuda/bin/..//include/sm_35_intrinsics.h \
+    /opt/cuda/bin/..//include/sm_61_intrinsics.h \
+    /opt/cuda/bin/..//include/sm_61_intrinsics.hpp \
+    /opt/cuda/bin/..//include/crt/sm_70_rt.h \
+    /opt/cuda/bin/..//include/crt/sm_70_rt.hpp \
+    /opt/cuda/bin/..//include/surface_functions.h \
+    /opt/cuda/bin/..//include/texture_fetch_functions.h \
+    /opt/cuda/bin/..//include/texture_indirect_functions.h \
+    /opt/cuda/bin/..//include/surface_indirect_functions.h \
+    /opt/cuda/bin/..//include/device_launch_parameters.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/algorithm \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/utility \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_relops.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_pair.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/initializer_list \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_algobase.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/functexcept.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/numeric_traits.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator_base_types.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator_base_funcs.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/debug/assertions.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_iterator.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/ptr_traits.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/debug/debug.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/predefined_ops.h \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_algo.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/algorithmfwd.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_heap.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_tempbuf.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_construct.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/new \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/exception \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/exception_ptr.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/cxxabi_init_exception.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/typeinfo \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/hash_bytes.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/nested_exception.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/alloc_traits.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/alloc_traits.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/memoryfwd.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/uniform_int_dist.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/limits \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cassert \
-    /usr/include/assert.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/iostream \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ostream \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ios \
@@ -92,13 +182,9 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/postypes.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cwchar \
     /usr/include/wchar.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/stdarg.h \
     /usr/include/bits/wchar.h \
     /usr/include/bits/types/wint_t.h \
     /usr/include/bits/types/mbstate_t.h \
-    /usr/include/bits/types/__mbstate_t.h \
-    /usr/include/bits/types/__FILE.h \
-    /usr/include/bits/types/FILE.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/char_traits.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cstdint \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/stdint.h \
@@ -120,11 +206,6 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /usr/include/bits/sched.h \
     /usr/include/bits/types/struct_sched_param.h \
     /usr/include/bits/cpu-set.h \
-    /usr/include/time.h \
-    /usr/include/bits/time.h \
-    /usr/include/bits/timex.h \
-    /usr/include/bits/types/struct_tm.h \
-    /usr/include/bits/types/struct_itimerspec.h \
     /usr/include/bits/setjmp.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/x86_64-pc-linux-gnu/bits/atomic_word.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/locale_classes.h \
@@ -140,13 +221,6 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/basic_string.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/string_conversions.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cstdio \
-    /usr/include/stdio.h \
-    /usr/include/bits/types/__fpos_t.h \
-    /usr/include/bits/types/__fpos64_t.h \
-    /usr/include/bits/types/struct_FILE.h \
-    /usr/include/bits/types/cookie_io_functions_t.h \
-    /usr/include/bits/stdio_lim.h \
-    /usr/include/bits/sys_errlist.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cerrno \
     /usr/include/errno.h \
     /usr/include/bits/errno.h \
@@ -178,37 +252,10 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/istream.tcc \
     /opt/cuda/bin/..//include/cublas_v2.h \
     /opt/cuda/bin/..//include/cublas_api.h \
-    /opt/cuda/bin/..//include/driver_types.h \
-    /opt/cuda/bin/..//include/crt/host_defines.h \
-    /opt/cuda/bin/..//include/vector_types.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed/limits.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed/syslimits.h \
-    /usr/include/limits.h \
-    /usr/include/bits/posix1_lim.h \
-    /usr/include/bits/local_lim.h \
-    /usr/include/linux/limits.h \
-    /usr/include/bits/posix2_lim.h \
-    /usr/include/bits/xopen_lim.h \
-    /usr/include/bits/uio_lim.h \
     /opt/cuda/bin/..//include/cuComplex.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/math.h \
-    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cmath \
-    /usr/include/math.h \
-    /usr/include/bits/math-vector.h \
-    /usr/include/bits/libm-simd-decl-stubs.h \
-    /usr/include/bits/flt-eval-method.h \
-    /usr/include/bits/fp-logb.h \
-    /usr/include/bits/fp-fast.h \
-    /usr/include/bits/mathcalls-helper-functions.h \
-    /usr/include/bits/mathcalls.h \
-    /usr/include/bits/mathcalls-narrow.h \
-    /usr/include/bits/iscanonical.h \
     /opt/cuda/bin/..//include/cuda_fp16.h \
     /opt/cuda/bin/..//include/cuda_fp16.hpp \
-    /usr/include/string.h \
-    /usr/include/strings.h \
-    /opt/cuda/bin/..//include/library_types.h \
-    ../src/../include/PFPArray.h \
+    ../src/../include/PFPArray.cu.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/map \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/bits/stl_tree.h \
     /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/ext/aligned_buffer.h \
@@ -307,12 +354,6 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/malloc_and_free.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/malloc_and_free.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/guarded_cuda_runtime_api.h \
-    /opt/cuda/bin/..//include/cuda_runtime_api.h \
-    /opt/cuda/bin/..//include/builtin_types.h \
-    /opt/cuda/bin/..//include/device_types.h \
-    /opt/cuda/bin/..//include/surface_types.h \
-    /opt/cuda/bin/..//include/texture_types.h \
-    /opt/cuda/bin/..//include/cuda_device_runtime_api.h \
     /opt/cuda/bin/..//include/thrust/detail/seq.h \
     /opt/cuda/bin/..//include/thrust/detail/execute_with_allocator.h \
     /opt/cuda/bin/..//include/thrust/detail/allocator/allocator_traits.h \
@@ -375,28 +416,61 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/get_value.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/get_value.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/get_value.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cross_system.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/assign_value.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/assign_value.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/assign_value.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/assign_value.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/adl/iter_swap.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/sequential/iter_swap.h \
-    /opt/cuda/bin/..//include/thrust/system/cpp/detail/iter_swap.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/iter_swap.h \
-    /opt/cuda/bin/..//include/thrust/detail/device_ptr.inl \
-    /opt/cuda/bin/..//include/thrust/device_reference.h \
-    /opt/cuda/bin/..//include/thrust/detail/device_reference.inl \
-    /opt/cuda/bin/..//include/thrust/device_malloc.h \
-    /opt/cuda/bin/..//include/thrust/detail/device_malloc.inl \
-    /opt/cuda/bin/..//include/thrust/device_free.h \
-    /opt/cuda/bin/..//include/thrust/detail/device_free.inl \
-    /opt/cuda/bin/..//include/thrust/detail/vector_base.h \
-    /opt/cuda/bin/..//include/thrust/iterator/detail/normal_iterator.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/copy.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/internal/copy_device_to_device.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/transform.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/parallel_for.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/par_to_seq.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/par.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/core/agent_launcher.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/core/triple_chevron_launch.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/core/alignment.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/core/util.h \
+    /opt/cuda/bin/..//include/cuda_occupancy.h \
     /opt/cuda/bin/..//include/thrust/iterator/detail/is_trivial_iterator.h \
-    /opt/cuda/bin/..//include/thrust/iterator/reverse_iterator.h \
-    /opt/cuda/bin/..//include/thrust/iterator/detail/reverse_iterator_base.h \
-    /opt/cuda/bin/..//include/thrust/iterator/detail/reverse_iterator.inl \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/block_load.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/block_exchange.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../util_ptx.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../util_type.cuh \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/c++/cfloat \
+    /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/float.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../util_macro.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../util_debug.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../iterator/cache_modified_input_iterator.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../iterator/../thread/thread_load.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../iterator/../thread/thread_store.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/../iterator/../util_device.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/block_store.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/block_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/block_scan_raking.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../block/block_raking_layout.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../thread/thread_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../thread/../thread/thread_operators.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../thread/thread_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../warp/warp_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../warp/specializations/warp_scan_shfl.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/../../warp/specializations/warp_scan_smem.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/specializations/block_scan_warp_scans.cuh \
+    /opt/cuda/bin/..//include/thrust/distance.h \
+    /opt/cuda/bin/..//include/thrust/detail/distance.inl \
+    /opt/cuda/bin/..//include/thrust/advance.h \
+    /opt/cuda/bin/..//include/thrust/detail/advance.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/advance.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/advance.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/distance.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/distance.inl \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/internal/copy_cross_system.h \
+    /opt/cuda/bin/..//include/thrust/detail/dispatch/is_trivial_copy.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/uninitialized_copy.h \
+    /opt/cuda/bin/..//include/thrust/detail/temporary_array.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/tagged_iterator.h \
     /opt/cuda/bin/..//include/thrust/detail/contiguous_storage.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/normal_iterator.h \
     /opt/cuda/bin/..//include/thrust/detail/contiguous_storage.inl \
     /opt/cuda/bin/..//include/thrust/detail/allocator/copy_construct_range.h \
     /opt/cuda/bin/..//include/thrust/detail/allocator/copy_construct_range.inl \
@@ -424,37 +498,12 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/transform.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/transform.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/transform.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/transform.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/copy.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/copy.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/copy.inl \
-    /opt/cuda/bin/..//include/thrust/detail/dispatch/is_trivial_copy.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/general_copy.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/trivial_copy.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/copy.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/copy.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cross_system.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/internal/copy_device_to_device.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/internal/copy_cross_system.h \
-    /opt/cuda/bin/..//include/thrust/distance.h \
-    /opt/cuda/bin/..//include/thrust/detail/distance.inl \
-    /opt/cuda/bin/..//include/thrust/advance.h \
-    /opt/cuda/bin/..//include/thrust/detail/advance.inl \
-    /opt/cuda/bin/..//include/thrust/system/detail/generic/advance.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/generic/advance.inl \
-    /opt/cuda/bin/..//include/thrust/system/detail/generic/distance.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/generic/distance.inl \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/uninitialized_copy.h \
-    /opt/cuda/bin/..//include/thrust/detail/temporary_array.h \
-    /opt/cuda/bin/..//include/thrust/iterator/detail/tagged_iterator.h \
-    /opt/cuda/bin/..//include/thrust/detail/allocator/temporary_allocator.h \
-    /opt/cuda/bin/..//include/thrust/detail/allocator/tagged_allocator.h \
-    /opt/cuda/bin/..//include/thrust/detail/allocator/tagged_allocator.inl \
-    /opt/cuda/bin/..//include/thrust/detail/allocator/temporary_allocator.inl \
-    /opt/cuda/bin/..//include/thrust/detail/allocator/no_throw_allocator.h \
-    /opt/cuda/bin/..//include/thrust/detail/temporary_array.inl \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/par_to_seq.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/par.h \
     /opt/cuda/bin/..//include/thrust/detail/allocator/default_construct_range.h \
     /opt/cuda/bin/..//include/thrust/detail/allocator/default_construct_range.inl \
     /opt/cuda/bin/..//include/thrust/uninitialized_fill.h \
@@ -482,6 +531,37 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /opt/cuda/bin/..//include/thrust/detail/allocator/destroy_range.inl \
     /opt/cuda/bin/..//include/thrust/detail/allocator/fill_construct_range.h \
     /opt/cuda/bin/..//include/thrust/detail/allocator/fill_construct_range.inl \
+    /opt/cuda/bin/..//include/thrust/detail/allocator/temporary_allocator.h \
+    /opt/cuda/bin/..//include/thrust/detail/allocator/tagged_allocator.h \
+    /opt/cuda/bin/..//include/thrust/detail/allocator/tagged_allocator.inl \
+    /opt/cuda/bin/..//include/thrust/detail/allocator/temporary_allocator.inl \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/terminate.h \
+    /opt/cuda/bin/..//include/thrust/detail/allocator/no_throw_allocator.h \
+    /opt/cuda/bin/..//include/thrust/detail/temporary_array.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/iter_swap.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/iter_swap.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/iter_swap.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/iter_swap.h \
+    /opt/cuda/bin/..//include/thrust/swap.h \
+    /opt/cuda/bin/..//include/thrust/detail/swap.inl \
+    /opt/cuda/bin/..//include/thrust/detail/swap_ranges.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/swap_ranges.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/swap_ranges.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/swap_ranges.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/swap_ranges.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/swap_ranges.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/swap_ranges.h \
+    /opt/cuda/bin/..//include/thrust/detail/device_ptr.inl \
+    /opt/cuda/bin/..//include/thrust/device_reference.h \
+    /opt/cuda/bin/..//include/thrust/detail/device_reference.inl \
+    /opt/cuda/bin/..//include/thrust/device_malloc.h \
+    /opt/cuda/bin/..//include/thrust/detail/device_malloc.inl \
+    /opt/cuda/bin/..//include/thrust/device_free.h \
+    /opt/cuda/bin/..//include/thrust/detail/device_free.inl \
+    /opt/cuda/bin/..//include/thrust/detail/vector_base.h \
+    /opt/cuda/bin/..//include/thrust/iterator/reverse_iterator.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/reverse_iterator_base.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/reverse_iterator.inl \
     /opt/cuda/bin/..//include/thrust/detail/vector_base.inl \
     /opt/cuda/bin/..//include/thrust/detail/overlapped_copy.h \
     /opt/cuda/bin/..//include/thrust/equal.h \
@@ -530,35 +610,210 @@ src/PFPArray.o : ../src/PFPArray.cpp \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/scan.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/scan.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/scan.h \
+    /opt/cuda/bin/..//include/thrust/detail/cstdint.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/device_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/dispatch_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_scan.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/single_pass_scan_operators.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../warp/warp_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../warp/specializations/warp_reduce_shfl.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../warp/specializations/warp_reduce_smem.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../grid/grid_queue.cuh \
+    /opt/cuda/bin/..//include/thrust/detail/mpl/math.h \
+    /opt/cuda/bin/..//include/thrust/detail/minmax.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/scan_by_key.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/scan_by_key.h \
     /opt/cuda/bin/..//include/thrust/system/cpp/detail/scan_by_key.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/scan_by_key.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/adl/reduce.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/sequential/reduce.h \
-    /opt/cuda/bin/..//include/thrust/system/cpp/detail/reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/execution_policy.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/device_select.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/dispatch_select_if.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_select_if.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/block_discontinuity.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/block/block_adjacent_difference.cuh \
+    /opt/cuda/bin/..//include/thrust/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/detail/adjacent_difference.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/adjacent_difference.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/adjacent_difference.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/detail/alignment.h \
+    /opt/cuda/bin/..//include/thrust/copy.h \
+    /opt/cuda/bin/..//include/thrust/detail/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/detail/copy_if.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/copy_if.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/copy_if.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/count.h \
     /opt/cuda/bin/..//include/thrust/system/cuda/detail/reduce.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/adl/reduce_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/device_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/../iterator/arg_index_input_iterator.cuh \
+    /opt/cuda/bin/..//include/thrust/version.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/dispatch_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/block_reduce.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/specializations/block_reduce_raking.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/specializations/block_reduce_raking_commutative_only.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/specializations/block_reduce_warp_reductions.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../grid/grid_mapping.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../grid/grid_even_share.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/dispatch_reduce_by_key.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_reduce_by_key.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../iterator/constant_input_iterator.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/equal.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/mismatch.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/find.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/extrema.h \
+    /opt/cuda/bin/..//include/thrust/extrema.h \
+    /opt/cuda/bin/..//include/thrust/detail/extrema.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/extrema.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/extrema.inl \
+    /opt/cuda/bin/..//include/thrust/detail/get_iterator_value.h \
+    /opt/cuda/bin/..//include/thrust/execution_policy.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/execution_policy.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/par.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/binary_search.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/binary_search.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/extrema.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/extrema.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/find.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/find.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/merge.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/merge.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/merge.inl \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/partition.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/partition.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/reduce_by_key.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/reduce_by_key.h \
     /opt/cuda/bin/..//include/thrust/detail/type_traits/algorithm/intermediate_type_from_function_and_iterators.h \
-    /opt/cuda/bin/..//include/thrust/system/cpp/detail/reduce_by_key.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/reduce_by_key.h \
-    /opt/cuda/bin/..//include/thrust/detail/minmax.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/remove.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/remove.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/sort.inl \
+    /opt/cuda/bin/..//include/thrust/reverse.h \
+    /opt/cuda/bin/..//include/thrust/detail/reverse.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/reverse.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/reverse.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/reverse.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/reverse.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/reverse.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_merge_sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_merge_sort.inl \
+    /opt/cuda/bin/..//include/thrust/merge.h \
+    /opt/cuda/bin/..//include/thrust/detail/merge.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/merge.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/merge.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/merge.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/merge.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/insertion_sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/copy_backward.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_primitive_sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_primitive_sort.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_radix_sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/stable_radix_sort.inl \
+    /opt/cuda/bin/..//include/thrust/iterator/transform_iterator.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/transform_iterator.inl \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/unique.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/unique.h \
+    /opt/cuda/bin/..//include/thrust/system/cpp/detail/unique_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/unique_by_key.h \
+    /opt/cuda/bin/..//include/thrust/transform_reduce.h \
+    /opt/cuda/bin/..//include/thrust/detail/transform_reduce.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/transform_reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/transform_reduce.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/transform_reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/transform_reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/transform_reduce.h \
     /opt/cuda/bin/..//include/thrust/iterator/counting_iterator.h \
     /opt/cuda/bin/..//include/thrust/iterator/detail/counting_iterator.inl \
     /opt/cuda/bin/..//include/thrust/detail/numeric_traits.h \
-    /opt/cuda/bin/..//include/thrust/iterator/transform_iterator.h \
-    /opt/cuda/bin/..//include/thrust/iterator/detail/transform_iterator.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/extrema.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/gather.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/inner_product.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/partition.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/device_partition.cuh \
+    /opt/cuda/bin/..//include/thrust/partition.h \
+    /opt/cuda/bin/..//include/thrust/detail/partition.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/partition.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/partition.inl \
+    /opt/cuda/bin/..//include/thrust/remove.h \
+    /opt/cuda/bin/..//include/thrust/detail/remove.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/remove.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/remove.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/remove.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/remove.h \
+    /opt/cuda/bin/..//include/thrust/count.h \
+    /opt/cuda/bin/..//include/thrust/detail/count.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/count.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/count.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/count.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/count.h \
+    /opt/cuda/bin/..//include/thrust/sort.h \
+    /opt/cuda/bin/..//include/thrust/detail/sort.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/sort.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/sort.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/sort.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/sort.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/device_radix_sort.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/dispatch_radix_sort.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_radix_sort_upsweep.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/agent_radix_sort_downsweep.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../agent/../block/block_radix_rank.cuh \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/cub/device/dispatch/../../block/block_radix_sort.cuh \
+    /opt/cuda/bin/..//include/thrust/detail/trivial_sequence.h \
+    /opt/cuda/bin/..//include/thrust/sequence.h \
+    /opt/cuda/bin/..//include/thrust/detail/sequence.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/sequence.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/sequence.inl \
+    /opt/cuda/bin/..//include/thrust/tabulate.h \
+    /opt/cuda/bin/..//include/thrust/detail/tabulate.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/tabulate.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/tabulate.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/tabulate.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/tabulate.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/tabulate.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/sequence.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/sequential/sequence.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/partition.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/reduce_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/transform_scan.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/unique.h \
+    /opt/cuda/bin/..//include/thrust/unique.h \
+    /opt/cuda/bin/..//include/thrust/detail/unique.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/unique.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/unique.inl \
+    /opt/cuda/bin/..//include/thrust/detail/range/head_flags.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/unique_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/unique_by_key.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/unique.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/unique_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/unique_by_key.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/binary_search.h \
+    /opt/cuda/bin/..//include/thrust/system/cuda/detail/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/detail/set_operations.inl \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/generic/set_operations.inl \
+    /opt/cuda/bin/..//include/thrust/iterator/constant_iterator.h \
+    /opt/cuda/bin/..//include/thrust/iterator/detail/constant_iterator_base.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/set_operations.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/reduce.h \
+    /opt/cuda/bin/..//include/thrust/system/detail/adl/reduce_by_key.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/find.h \
-    /opt/cuda/bin/..//include/thrust/system/detail/sequential/find.h \
-    /opt/cuda/bin/..//include/thrust/system/cpp/detail/find.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/find.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/mismatch.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/mismatch.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/mismatch.h \
     /opt/cuda/bin/..//include/thrust/system/detail/adl/equal.h \
     /opt/cuda/bin/..//include/thrust/system/detail/sequential/equal.h \
-    /opt/cuda/bin/..//include/thrust/system/cuda/detail/equal.h \
     /opt/cuda/bin/..//include/thrust/detail/device_vector.inl \
     /opt/cuda/bin/..//include/thrust/host_vector.h \
     /opt/cuda/bin/..//include/thrust/detail/host_vector.inl

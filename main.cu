@@ -5,7 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include "include/PFPArray.h"
+#include "include/PFPArray.cu.h"
 #include "include/PFPTree.h"
 #include "include/PFPGrowth.cu.h"
 
@@ -42,7 +42,7 @@ int main( int argc, char * argv[] ){
     double mtime;
     gettimeofday(&startc, NULL);
 
-     int minimum_support_threshold=1;
+     int minimum_support_threshold=3;
      PFPTree fptree{transactions, minimum_support_threshold};
      printf("Terminou de fazer o FPTree \n");
      PFPArray pfp_array(fptree);

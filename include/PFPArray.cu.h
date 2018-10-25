@@ -30,7 +30,9 @@
 #include <thrust/device_vector.h>
 #define MAX_STR_SIZE 32
 
-void cstringcpy(const char *src,  char * dest);
+
+__device__ __host__  void cstringcpy(const char *src,  char * dest);
+__device__ __host__ int compare(const char *String_1, const char *String_2);
 
 struct PFPArrayMap {
     PFPNode *ItemId;
@@ -45,40 +47,13 @@ struct PFPArrayMap {
     char ItemId[MAX_STR_SIZE];
     cuda_int indexArrayMap;
     cuda_int suporte;
-    Elo(const Elo& a){
-           	cstringcpy(a.ItemId,ItemId);
-               indexArrayMap=a.indexArrayMap;
-               suporte=a.suporte;
-           }
-    Elo& operator=(const Elo& a)
-        {
-        	cstringcpy(a.ItemId,ItemId);
-            indexArrayMap=a.indexArrayMap;
-            suporte=a.suporte;
-            return *this;
-        }
+    __device__ __host__ Elo(const Elo &a);
+    __device__ __host__  Elo(Elo *a);
+    __device__ __host__  Elo(Elo& a);
+    __device__ __host__  Elo();
+//    __device__ __host__  Elo operator=(const Elo& a);
 
-    	Elo operator+(Elo a) const
-        {
-    		a.suporte;
-    		return *this;
-//    		return Elo(a);
-    //		return x;
-    //		  a.suporte+=suporte;
-    //		  return *this;
-    //        return Elo(a.suporte+suporte);
-        }
-        bool operator==(const Elo& a) const
-        {
-            return (ItemId == a.ItemId);
-        }
-
-        Elo& operator[] (char* a) {
-        	int i=0;
-//        	while(0!=strcmp(v[i]->ItemId,a));
-//        	i++;
-//            return v[i];
-              }
+    __device__ __host__  void operator=( Elo* a);
 };
 
 typedef struct {
@@ -86,27 +61,6 @@ typedef struct {
     cuda_int indexP;
     cuda_int suporte;
 } ArrayMap;
-
-typedef struct {
-    Elo *elo;
-    size_t size;
-} EloMap;
-
-
-typedef struct {
-    EloMap *eloMap;
-    cuda_int size;
-} EloGrid;
-
-typedef struct{
-    Elo *eloArray;
-    int size;
-}EloVector;
-
-typedef struct {
-    Elo elo;
-    int size;
-}SetMap;
 
 using HashMap = std::vector<std::pair<PFPArrayMap, int >>;
 
@@ -124,6 +78,17 @@ private:
     int recur_is_parent_array(PFPNode *a);
 
     void create_array_and_elepos(const PFPTree &fptree);
+
+};
+
+
+struct EloArray{
+private:
+public:
+	 int *size;
+	 Elo **elo;
+	 __device__    Elo operator[](const Elo& x);
+	 __device__    Elo* operator[](Elo* x);
 
 };
 

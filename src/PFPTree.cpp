@@ -25,9 +25,9 @@
 
 struct frequency_comparator {
     bool operator()(const std::pair<Item, int> &lhs, const std::pair<Item, int> &rhs) const {
-        return lhs.second > rhs.second || lhs.second == rhs.second && stoi(lhs.first) < stoi(rhs.first);
+//        return lhs.second > rhs.second || lhs.second == rhs.second && stoi(lhs.first) < stoi(rhs.first);
 
-//        return lhs.second > rhs.second || lhs.second == rhs.second && lhs.first < rhs.first;
+        return lhs.second > rhs.second || lhs.second == rhs.second && lhs.first < rhs.first;
     }
 };
 
